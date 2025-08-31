@@ -4,5 +4,6 @@
   "back-btn-indic": "Back",
   "previous-url": "[ROOT]/",
   "next-url": "[ROOT]/start",
-  "bonjour": "Hello World"
+  "bonjour": "Hello World",
+  "marche": "It really works?"
 }
