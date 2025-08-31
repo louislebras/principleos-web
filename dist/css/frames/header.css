@@ -1,0 +1,1 @@
+header{display:flex;flex-direction:column;gap:2px}.first-part-header{display:flex;gap:10vw}@media (max-width:850px){.first-part-header{justify-content:space-between}}.second-part-header{display:flex;gap:10px}

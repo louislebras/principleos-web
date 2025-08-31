@@ -1,0 +1,59 @@
+:root {
+  --slide-background: #f4f4f4;
+  --sidebar-width-collapsed: 40px;
+  --sidebar-width-expanded: 350px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+button {
+  outline: none;
+}
+
+main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer {
+  padding-bottom: 35vh;
+}
+
+@media (max-width: 768px) {
+  :root {
+    --sidebar-width-collapsed: 50px;
+    --sidebar-width-expanded: 250px;
+  }
+}
+.hour-wrapper {
+  width: fit-content;
+  padding: 10px 20px;
+  border-radius: 7px;
+  background-color: white;
+}
+
+.dot-hour {
+  display: flex;
+  align-items: center;
+  height: fit-content;
+  position: relative;
+  gap: 8px;
+}
+
+.dot {
+  background-color: black;
+  width: 10px;
+  height: 10px;
+  border-radius: 100px;
+}
+
+.hour {
+  display: flex;
+  gap: 5px;
+}

@@ -1,0 +1,266 @@
+@charset "UTF-8";
+.pre-open-experience {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 100;
+  transform: translate(-50%, -50%);
+}
+
+.blur-machine {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(15px);
+}
+
+.time-pre-open {
+  color: #595757;
+  animation: firstHappened 2s ease 0.5s both;
+}
+
+@media (max-width: 800px) {
+  .time-pre-open {
+    font-size: 12px;
+  }
+}
+@keyframes firstHappened {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.pre-open-experience-text {
+  width: 280px;
+  position: absolute;
+  height: 60vh;
+  left: 50%;
+  top: 50%;
+  z-index: 100;
+  transform: translate(-50%, -50%);
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 15px;
+}
+
+@media (max-width: 800px) {
+  .pre-open-experience-text {
+    width: 320px;
+  }
+}
+@media (max-width: 350px) {
+  .pre-open-experience-text {
+    width: 80%;
+  }
+}
+.container {
+  position: relative;
+  width: 100%;
+  background: linear-gradient(7deg, #2d8fff -25.06%, #2d8fff 94.35%);
+  color: white !important;
+  padding: 10px 12px;
+  border-radius: 15px;
+  clip-path: inset(0 round 15px) !important;
+  animation: secondHappened 2s ease 1.5s both;
+}
+.container p {
+  position: relative;
+  z-index: 10;
+}
+.container .orbus-blue {
+  width: 170%;
+  position: absolute;
+  filter: blur(60px);
+  background: linear-gradient(7deg, #001eff -25.06%, #2e87ec 94.35%);
+  top: 30%;
+  left: -20%;
+  height: 70%;
+  animation: West 3s ease 8s both;
+}
+
+@keyframes secondHappened {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes West {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.progressive-blur-container {
+  position: absolute;
+  left: 0;
+  bottom: 3%;
+  right: 0;
+  width: 100%;
+  height: 96%;
+  pointer-event: none;
+  border-radius: 15px;
+  animation: Ye 3s ease 3s both;
+  z-index: 100;
+}
+
+@keyframes Ye {
+  0% {
+    height: 100%;
+  }
+  100% {
+    height: 0%;
+  }
+}
+.progressive-blur-container > .blur-filter {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  border-radius: 15px;
+}
+
+.progressive-blur-container > .blur-filter:nth-child(1) {
+  backdrop-filter: blur(1px);
+  mask: linear-gradient(rgba(0, 0, 0, 0), rgb(0, 0, 0) 10%, rgb(0, 0, 0) 30%, rgba(0, 0, 0, 0) 40%);
+  border-radius: 15px;
+}
+
+.progressive-blur-container > .blur-filter:nth-child(2) {
+  backdrop-filter: blur(2px);
+  mask: linear-gradient(rgba(0, 0, 0, 0) 10%, rgb(0, 0, 0) 20%, rgb(0, 0, 0) 40%, rgba(0, 0, 0, 0) 50%);
+  border-radius: 15px;
+}
+
+.progressive-blur-container > .blur-filter:nth-child(3) {
+  backdrop-filter: blur(4px);
+  mask: linear-gradient(rgba(0, 0, 0, 0) 15%, rgb(0, 0, 0) 30%, rgb(0, 0, 0) 50%, rgba(0, 0, 0, 0) 60%);
+  border-radius: 15px;
+}
+
+.progressive-blur-container > .blur-filter:nth-child(4) {
+  backdrop-filter: blur(8px);
+  mask: linear-gradient(rgba(0, 0, 0, 0) 20%, rgb(0, 0, 0) 40%, rgb(0, 0, 0) 60%, rgba(0, 0, 0, 0) 70%);
+  border-radius: 15px;
+}
+
+.progressive-blur-container > .blur-filter:nth-child(5) {
+  backdrop-filter: blur(16px);
+  mask: linear-gradient(rgba(0, 0, 0, 0) 40%, rgb(0, 0, 0) 60%, rgb(0, 0, 0) 80%, rgba(0, 0, 0, 0) 90%);
+  border-radius: 15px;
+}
+
+.progressive-blur-container > .blur-filter:nth-child(6) {
+  backdrop-filter: blur(32px);
+  mask: linear-gradient(rgba(0, 0, 0, 0) 60%, rgb(0, 0, 0) 80%);
+  border-radius: 15px;
+}
+
+.progressive-blur-container > .blur-filter:nth-child(7) {
+  z-index: 10;
+  background-filter: blur(64px);
+  mask: linear-gradient(rgba(0, 0, 0, 0) 70%, rgb(0, 0, 0) 100%);
+  border-radius: 15px;
+}
+
+.progressive-blur-container > .gradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(transparent, #2d8fff);
+  border-radius: 15px;
+}
+
+.button-open-note {
+  display: flex;
+  gap: 10px;
+  color: #e4af0a;
+  margin-top: 30px;
+  opacity: 0;
+  animation: JesusFadeIn 2s ease 6s forwards;
+  cursor: pointer;
+}
+
+.button-open-note.ready {
+  animation: none;
+  opacity: 1; /* 🔥 fix principal */
+  transition: opacity 0.3s ease;
+}
+
+.button-open-note.ready:hover {
+  opacity: 0.5;
+}
+
+.button-open-note img {
+  transform: rotate(180deg);
+  width: 10px;
+}
+
+@keyframes JesusFadeIn {
+  0% {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+  }
+}
+.wrapper-container {
+  position: relative;
+}
+
+.queue-ios {
+  position: absolute;
+  bottom: -4px;
+  left: -8px;
+  width: 28px;
+  animation: Jesus2 2s ease 8s both;
+}
+
+@keyframes Jesus2 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.pre-open-experience-text {
+  transition: opacity 2s ease;
+  opacity: 1;
+}
+
+.pre-open-experience-text.hidden {
+  opacity: 0;
+}
+
+.blur-machine {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(15px);
+  transition: backdrop-filter 2s ease, background-color 2s ease;
+}
+
+.blur-machine.hidden {
+  backdrop-filter: blur(0px);
+  background-color: rgba(255, 255, 255, 0);
+}

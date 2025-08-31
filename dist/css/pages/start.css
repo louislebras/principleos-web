@@ -1,0 +1,1 @@
+.slide-content{padding:37vh 30vw 40vh}@media (max-width:1000px){.slide-content{padding:35vh 30vw 40vh}}.sidebar-container.visible{opacity:0;transform:translateX(0);transition:opacity 2s ease,visibility 2s ease,width .3s ease;visibility:hidden;z-index:-300}body,html,main{overflow:hidden}

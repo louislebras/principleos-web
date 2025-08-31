@@ -1,0 +1,97 @@
+@use "sass:math";
+
+@function sqrt($r) {
+  $x0: 1;
+  $x1: $x0;
+
+  @for $i from 1 through 10 {
+    $x1: $x0 - math.div(($x0 * $x0 - abs($r)), (2 * $x0));
+    $x0: $x1;
+  }
+
+  @return $x1;
+}
+
+@keyframes noise {
+  0% {
+    transform: translate(-50%, -50%) translate3d(0, 9rem, 0)
+      rotate3d(0, 0, 1, 0deg);
+  }
+  10% {
+    transform: translate(-50%, -50%) translate3d(-1rem, -4rem, 0)
+      rotate3d(0, 0, 1, 52deg);
+  }
+  20% {
+    transform: translate(-50%, -50%) translate3d(-8rem, 2rem, 0)
+      rotate3d(0, 0, 1, 352deg);
+  }
+  30% {
+    transform: translate(-50%, -50%) translate3d(9rem, -9rem, 0)
+      rotate3d(0, 0, 1, 166deg);
+  }
+  40% {
+    transform: translate(-50%, -50%) translate3d(-2rem, 7rem, 0)
+      rotate3d(0, 0, 1, 326deg);
+  }
+  50% {
+    transform: translate(-50%, -50%) translate3d(-9rem, -4rem, 0)
+      rotate3d(0, 0, 1, 243deg);
+  }
+  60% {
+    transform: translate(-50%, -50%) translate3d(2rem, 6rem, 0)
+      rotate3d(0, 0, 1, 209deg);
+  }
+  70% {
+    transform: translate(-50%, -50%) translate3d(7rem, -8rem, 0)
+      rotate3d(0, 0, 1, 206deg);
+  }
+  80% {
+    transform: translate(-50%, -50%) translate3d(-9rem, 1rem, 0)
+      rotate3d(0, 0, 1, 164deg);
+  }
+  90% {
+    transform: translate(-50%, -50%) translate3d(6rem, -5rem, 0)
+      rotate3d(0, 0, 1, 264deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) translate3d(-7rem, 0, 0)
+      rotate3d(0, 0, 1, 183deg);
+  }
+}
+
+#noise {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: calc(#{sqrt(math.pow(100, 2) * 2) + "vw"} + 20rem);
+  height: calc(#{sqrt(math.pow(100, 2) * 2) + "vw"} + 20rem);
+  background-position: 50%;
+  background-image: url("../../assets/media/noise.webp");
+  opacity: 0.05;
+  transform: translate(-50%, -50%);
+  animation: noise 1s steps(4) infinite;
+  pointer-events: none;
+  user-select: none;
+  z-index: 99999999999999999;
+  //   opacity: 0;
+}
+
+@media (max-width: 950px) {
+  #noise {
+    opacity: 0.035;
+  }
+}
+
+@media (orientation: landscape) {
+  #noise {
+    width: calc(#{math.sqrt(math.pow(100, 2) * 2) + "vw"} + 20rem);
+    height: calc(#{math.sqrt(math.pow(100, 2) * 2) + "vw"} + 20rem);
+  }
+}
+
+@media (orientation: portrait) {
+  #noise {
+    width: calc(#{math.sqrt(math.pow(100, 2) * 2) + "vh"} + 20rem);
+    height: calc(#{math.sqrt(math.pow(100, 2) * 2) + "vh"} + 20rem);
+  }
+}

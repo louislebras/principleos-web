@@ -1,0 +1,36 @@
+.sidebar-container.visible {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(0);
+  z-index: -300;
+  transition: opacity 2s ease, visibility 2s ease, width 0.3s ease;
+}
+
+.pre-intro-def {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.pre-intro-def p {
+  width: 100%;
+}
+
+.name-leverage {
+  width: fit-content !important;
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: #333;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.slide-content {
+  padding: 25vh 33vw 20vh;
+}
+
+@media (max-width: 1000px) {
+  .slide-content {
+    padding: 25vh 30vw 40vh;
+  }
+}

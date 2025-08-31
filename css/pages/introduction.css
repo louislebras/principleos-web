@@ -1,0 +1,17 @@
+.text-content-component {
+  margin-top: 5vh;
+  margin-bottom: 25vh;
+}
+
+.slide-content {
+  padding: 25vh 30vw 0px;
+}
+
+@media (max-width: 1220px) {
+  .slide-content {
+    padding: 25vh 25vw 0px;
+  }
+}
+.back-heading-cover {
+  opacity: 0.5;
+}

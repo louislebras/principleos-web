@@ -1,0 +1,12 @@
+[
+  {
+    "group": "default",
+    "components": [
+      "header",
+      "pageContent"
+    ],
+    "pages": [
+      "/index"
+    ]
+  }
+]

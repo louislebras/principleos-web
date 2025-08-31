@@ -1,0 +1,232 @@
+.heading,
+.whats-inside,
+.benefit-list,
+.forwho-letters,
+.past-letters {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f0f0f0;
+}
+
+.form-fixed #mc_embed_signup_scroll {
+  width: 35vw;
+  max-width: 500px;
+  min-width: 400px;
+  padding: 5px 5px 5px 25px;
+  border-radius: 18px;
+  border: 2px solid rgba(213, 213, 213, 0.19);
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(12px);
+  position: fixed;
+  left: 50%;
+  bottom: 30px;
+  transform: translate(-50%, 0%);
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.form-fixed .mc-field-group input {
+  font-family: "Louize";
+  border: none;
+  outline: none;
+  color: #949191;
+  font-size: 18px;
+  position: relative;
+  top: -1px;
+}
+.form-fixed .mc-field-group input::placeholder {
+  color: #949191;
+}
+.form-fixed #mce-FNAME {
+  width: 85px;
+}
+.form-fixed #mce-EMAIL {
+  width: 210px;
+}
+.form-fixed #mc-embedded-subscribe {
+  background-color: white;
+  width: 45px;
+  height: 45px;
+  border-radius: 13px;
+  border: none;
+  font-family: "Inter" !important;
+  transition: 0.3s ease;
+}
+.form-fixed #mc-embedded-subscribe:hover {
+  background-color: #181818;
+  color: white;
+}
+.form-fixed .optionalParent,
+.form-fixed .clear {
+  display: flex;
+  align-items: center;
+}
+
+h1 {
+  width: fit-content;
+  text-align: center;
+  letter-spacing: -0.05em;
+  line-height: 70%;
+  margin-top: 10vh;
+}
+
+.monogram-theleverageletters-heading {
+  margin-top: 5px;
+  width: 60px;
+}
+
+.about-author-letters-text {
+  margin-top: 10px;
+}
+
+.cta-heading-lvrletrs {
+  margin-top: 25px;
+}
+
+.explanation-heading {
+  margin-top: 25px;
+  line-height: 145%;
+}
+
+.no-spam-indic {
+  margin-top: 8px;
+}
+
+.container-img-heading {
+  width: 70%;
+  background-color: #f0f0f0;
+  margin-top: 3vh;
+}
+
+.heading-cover-page {
+  width: 100%;
+  mix-blend-mode: darken !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.indic-img-founders-heading {
+  position: absolute;
+  left: 50%;
+  bottom: 0px;
+  transform: translate(-50%, 0%);
+  width: fit-content;
+  border-radius: 12px;
+  border: 1px solid #e2e2e2;
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(10px);
+  display: inline-flex;
+  padding: 7px 15px;
+  justify-content: center;
+  align-items: center;
+}
+
+.whats-inside {
+  margin-top: 25vh;
+}
+
+.title-whats-inside {
+  display: flex;
+  gap: 10vw;
+}
+
+.benefits-list {
+  margin-top: 20vh;
+}
+
+.title-benefits {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 8vh;
+}
+
+.forwho-letters {
+  margin-top: 20vh;
+}
+
+.title-forwho {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 4vh;
+}
+
+.container-blocks-forwho {
+  display: flex;
+  gap: 15px;
+}
+
+.past-letters {
+  margin-top: 20vh;
+}
+
+.list-past-letters-container {
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin-top: 15vh;
+}
+
+.line-separator-list {
+  width: 100%;
+  height: 1px;
+  background-color: #dadada;
+}
+
+.lasting-past-letters {
+  margin-top: 15vh;
+}
+
+.about-quote-louislebras {
+  width: 60vw;
+  border-radius: 30px;
+  background: #e9e9e9;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  padding: 80px 80px;
+}
+
+#monogram-fixed {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+  position: fixed;
+  top: 30px;
+  left: 50%;
+  transform: translate(-50%, 0%);
+}
+#monogram-fixed img {
+  height: 70px;
+  position: relative;
+}
+
+@media (max-width: 850px) {
+  #monogram-fixed {
+    top: 25px;
+  }
+}
+.fixed-monogram {
+  opacity: 1 !important;
+  transition: opacity 0.5s ease;
+  z-index: 9999;
+}
+
+.top-fixed-bar {
+  width: 100vw;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 25vh;
+  background: linear-gradient(0deg, rgba(240, 240, 240, 0) 0%, #f0f0f0 90%);
+  z-index: 10;
+}

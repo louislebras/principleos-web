@@ -1,0 +1,7 @@
+.pagination-fixed {
+  position: fixed;
+  top: 15px;
+  right: 20px;
+  z-index: 100;
+  color: #5d5d5d;
+}

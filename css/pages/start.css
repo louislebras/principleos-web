@@ -1,0 +1,22 @@
+.slide-content {
+  padding: 37vh 30vw 40vh;
+}
+
+@media (max-width: 1000px) {
+  .slide-content {
+    padding: 35vh 30vw 40vh;
+  }
+}
+.sidebar-container.visible {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(0);
+  z-index: -300;
+  transition: opacity 2s ease, visibility 2s ease, width 0.3s ease;
+}
+
+main,
+body,
+html {
+  overflow: hidden;
+}
