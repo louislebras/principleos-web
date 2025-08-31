@@ -17,27 +17,9 @@ $text-primary: $color-black;
 $text-secondary: $color-neutral-700;
 
 @font-face {
-  font-family: "Louize";
-  src: url("../../assets/fonts/louize-louislebras.woff") format("woff");
-  src: url("../../assets/fonts/louize-louislebras.woff2") format("woff2");
-  font-display: swap;
-  font-style: normal;
-  font-weight: 400 !important;
-}
-
-@font-face {
   font-family: "Geist";
   src: url("../../assets/fonts/geist-mono-regular.woff") format("woff");
   src: url("../../assets/fonts/geist-mono-regular.woff2") format("woff2");
-  font-display: swap;
-  font-style: normal;
-  font-weight: 400 !important;
-}
-
-@font-face {
-  font-family: "Junicode";
-  src: url("../../assets/fonts/junicode-condensed.woff") format("woff");
-  src: url("../../assets/fonts/junicode-condensed.woff2") format("woff2");
   font-display: swap;
   font-style: normal;
   font-weight: 400 !important;
@@ -50,15 +32,6 @@ $text-secondary: $color-neutral-700;
   font-display: swap;
   font-style: normal;
   font-weight: 400 !important;
-}
-
-.junicode {
-  font-family: "Junicode";
-}
-
-.louize {
-  font-family: "Louize" !important;
-  letter-spacing: -0.02em;
 }
 
 .geist {

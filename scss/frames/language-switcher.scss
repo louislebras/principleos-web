@@ -1,0 +1,61 @@
+.language-menu {
+  position: fixed;
+  display: inline-block;
+  bottom: 10px;
+  right: 15px;
+
+  background: none; /* pas de fond ici sinon le blur derrière le popup est masqué */
+  border: none;
+}
+
+.language-button {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  background: none;
+  color: black !important;
+
+  border-radius: 14px;
+  background-color: rgba(255, 255, 255, 0.45); /* translucide */
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  padding: 10px;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+.language-button img {
+  width: 15px !important;
+  margin-left: 5px;
+}
+
+.language-popup {
+  position: absolute;
+  bottom: 40px;
+  right: 0;
+  margin-top: 5px;
+  display: none;
+  flex-direction: column;
+  z-index: 10;
+  min-width: 120px;
+  border-radius: 17px;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.45); /* translucide */
+  border: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+.language-popup.visible {
+  display: block;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+.language-option {
+  padding: 15px;
+  cursor: pointer;
+  text-align: left;
+  border-radius: 10px;
+}
+
+.language-option:hover {
+  background: #f2f2f2;
+}
