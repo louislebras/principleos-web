@@ -3,7 +3,8 @@
     "group": "default",
     "components": [
       "header",
-      "pageContent"
+      "pageContent",
+      "language-switcher"
     ],
     "pages": [
       "/index"
