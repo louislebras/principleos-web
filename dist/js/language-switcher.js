@@ -62,7 +62,6 @@
 //     });
 //   });
 // });
-
 document.addEventListener("DOMContentLoaded", () => {
   const languageButtons = document.querySelectorAll(".language-button");
   const languagePopups = document.querySelectorAll(".language-popup");
@@ -121,8 +120,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
       newPath = newPath.replace(/\/\//g, "/");
 
-      // Utiliser loadPage pour gérer le changement de langue dynamiquement
-      window.loadPage(newPath);
+      // Forcer un rechargement complet de la page
+      window.location.href = newPath;
     });
   });
 });

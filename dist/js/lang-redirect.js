@@ -51,7 +51,6 @@
 //     }
 //   }
 // });
-
 import {
   availableLanguages,
   getDefaultLanguage,
@@ -87,6 +86,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (!langInPath && targetLang !== getDefaultLanguage()) {
           const newPath = `/dist/${targetLang}/${pathAfterDist}`;
           sessionStorage.setItem("langRedirected", "true");
+          sessionStorage.setItem("manualLangSelected", "true"); // Marquer comme sélection manuelle pour éviter d'autres redirections
           window.location.replace(newPath);
         }
       }
@@ -100,6 +100,7 @@ document.addEventListener("DOMContentLoaded", () => {
           currentPath.startsWith("/") ? currentPath : "/" + currentPath
         }`;
         sessionStorage.setItem("langRedirected", "true");
+        sessionStorage.setItem("manualLangSelected", "true"); // Marquer comme sélection manuelle
         window.location.replace(newPath);
       }
     }
