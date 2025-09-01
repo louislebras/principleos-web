@@ -16,6 +16,7 @@
 
     <header class="header">
     <p>Principle™</p>
+
 </header>
 <div id="pageContent"><link rel="stylesheet" href="/css/pages/home.css">
 
@@ -23,6 +24,8 @@
 <main>
     <p>Hello World</p>
     <p>It really works?</p>
+
+    <button class="open-modal-example">Ouvrir la modale example</button>
 </main></div>
 <link rel="stylesheet" href="/css/frames/language-switcher.css">
 
@@ -37,5 +40,8 @@
     </div>
 </div>
     <div id="modals-root"></div>
-    <script src="/modals/modal-manager.js" defer=""></script>
+    <script>window.__ROOT__ = ""; window.__DEFAULT_LANG__ = "en";</script>
+    <script src="/js/modal-config.js"></script>
+    <script src="/js/modal-manager.js" defer=""></script>
+
 </body></html>

@@ -1,6 +1,6 @@
 import { GOOGLE_ANALYTICS_ID } from "../config/analytics.js";
 
-const availableLanguages = ["en", "fr"];
+const availableLanguages = ["en","fr"];
 
 document.addEventListener("DOMContentLoaded", async () => {
   const forceFullReloadFor = ["/archives", "/about"];

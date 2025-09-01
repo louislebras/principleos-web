@@ -19,5 +19,8 @@
 <body class="s-size">
     <slot></slot>
     <div id="modals-root"></div>
-    <script src="[ROOT]/modals/modal-manager.js" defer></script>
+    <script>window.__ROOT__ = "[ROOT]"; window.__DEFAULT_LANG__ = "en";</script>
+    <script src="[ROOT]/js/modal-config.js"></script>
+    <script src="[ROOT]/js/modal-manager.js" defer></script>
+
 </body>
