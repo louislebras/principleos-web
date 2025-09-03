@@ -9,29 +9,30 @@
                 <button type="submit">Envoyer</button>
             </form>
 
+            <form id="form">
+                <input type="text" name="name" placeholder="Nom" />
+                <input type="email" name="email" placeholder="Email" />
+                <button type="submit">Envoyer</button>
+            </form>
+
             <script>
-                const scriptURL = 'https://script.google.com/macros/s/AKfycbzwTExyrNGBHNxBLf5t7mhCbAGjuNBFqC-8YEll6ZR7u-nYikCfMpkkdnr1CXhHIYk/exec';
+                const scriptURL = 'https://script.google.com/macros/s/AKfycbx1t8Ml8sAbrv8bv93c23sInlv21NiCq3I9G3oUjoamPQMiQz-dwBUZg6rK8_sYe75Ipg/exec';
 
                 document.getElementById('form').addEventListener('submit', async (e) => {
                     e.preventDefault();
-
-                    const data = {
-                        name: e.target.name.value,
-                        email: e.target.email.value
-                    };
+                    const form = e.target;
+                    const formData = new FormData(form);
 
                     try {
                         const res = await fetch(scriptURL, {
                             method: 'POST',
-                            headers: { 'Content-Type': 'application/json' },
-                            body: JSON.stringify(data)
+                            body: formData
                         });
 
                         const result = await res.json();
-                        alert(result.result === 'success' ? "✅ Enregistré dans la Google Sheet" : "❌ Erreur à l'enregistrement");
+                        alert(result.result === 'success' ? '✅ Enregistré dans Google Sheet' : '❌ Échec à l’enregistrement');
                     } catch (err) {
-                        alert("Erreur réseau ou script : " + err.message);
-                        console.error(err);
+                        alert('Erreur : ' + err.message);
                     }
                 });
             </script>
