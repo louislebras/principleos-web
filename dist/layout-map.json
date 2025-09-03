@@ -4,10 +4,21 @@
     "components": [
       "header",
       "pageContent",
-      "language-switcher"
+      "footer"
     ],
     "pages": [
       "/index"
+    ]
+  },
+  {
+    "group": "documentation",
+    "components": [
+      "header",
+      "pageContent",
+      "footer"
+    ],
+    "pages": [
+      "/documentation"
     ]
   }
 ]

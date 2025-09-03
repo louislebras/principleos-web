@@ -7,6 +7,7 @@
     <link rel="apple-touch-icon" href="https://louislebras.com/assets/favicon.png/">
     <link rel="shortcut icon" href="https://louislebras.com/assets/favicon.png/" type="image/png">
     <link rel="stylesheet" href="[ROOT]/css/main.css">
+    <link rel="stylesheet" href="[ROOT]/css/modals/allmodals.css">
     <script type="module" src="[ROOT]/js/lang-redirect.js" defer></script>
     <script type="module" src="[ROOT]/js/language-switcher.js" defer></script>
     <script type="module" src="[ROOT]/js/router.js" defer></script>
@@ -19,8 +20,8 @@
 <body class="s-size">
     <slot></slot>
     <div id="modals-root"></div>
-    <script>window.__ROOT__ = "[ROOT]"; window.__DEFAULT_LANG__ = "en";</script>
-    <script src="[ROOT]/js/modal-config.js"></script>
-    <script src="[ROOT]/js/modal-manager.js" defer></script>
+    <script>window.__DEFAULT_LANG__ = "en";</script>
+    <script src="[ROOT]js/modal-config.js" defer></script>
+    <script src="[ROOT]js/modal-manager.js" defer></script>
 
 </body>

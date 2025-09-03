@@ -23,7 +23,6 @@
 
 .inter {
   font-family: "Inter" !important;
-  letter-spacing: -0.03em;
 }
 
 // Text Colors
@@ -114,20 +113,21 @@ input {
   font-weight: 400;
   font-display: swap;
   font-style: normal;
+  line-height: 150%;
 }
 
 .xxs-size {
-  font-size: 10px;
+  font-size: 9px;
 }
 
 .xs-size {
-  font-size: 12px;
+  font-size: 10px;
 }
 .s-size {
-  font-size: 15px;
+  font-size: 12px;
 }
 .sx-size {
-  font-size: 16.5px;
+  font-size: 14px;
 }
 .m-size {
   font-size: 18px;
@@ -166,11 +166,20 @@ input {
 }
 
 .lss-size {
-  font-size: 36px;
+  font-size: 38px;
+  letter-spacing: -0.05em;
 }
 
 .xl-size {
   font-size: 64px;
+}
+
+.ultra-size {
+  font-size: 76px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 110%; /* 112.2px */
+  letter-spacing: -5.1px;
 }
 
 .center {

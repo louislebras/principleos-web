@@ -1,3 +1,3 @@
 export default function layout() {
-  return ["header", "pageContent", "language-switcher"];
+  return ["header", "pageContent", "footer"];
 }

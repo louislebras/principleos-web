@@ -21,10 +21,6 @@ main {
   align-items: center;
 }
 
-footer {
-  padding-bottom: 35vh;
-}
-
 @media (max-width: 768px) {
   :root {
     --sidebar-width-collapsed: 50px;

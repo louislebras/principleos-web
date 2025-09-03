@@ -1,0 +1,17 @@
+.feature-block-component {
+  width: 35vw;
+  max-width: 450px;
+  border-radius: 20px;
+  background: #f7f6f6;
+  padding: 21px 20px 20px;
+  display: flex;
+  flex-direction: column;
+
+  gap: 7px;
+
+  p,
+  a {
+    width: fit-content;
+    line-height: 140%;
+  }
+}

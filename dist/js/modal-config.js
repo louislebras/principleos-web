@@ -1,4 +1,4 @@
 window.modalConfig = {
   autoModals: ["cookies"],
-  manualModals: ["example"],
+  manualModals: ["example", "waitlist-form"],
 };

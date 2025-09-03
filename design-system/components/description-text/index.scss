@@ -1,0 +1,10 @@
+.description-text-component {
+  max-width: 450px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  p {
+    line-height: 165%;
+  }
+}

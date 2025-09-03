@@ -4,7 +4,7 @@
 const baseUrl = "https://principleos.com";
 
 // Liste des langues disponibles
-const availableLanguages = ["en", "fr"];
+const availableLanguages = ["en"];
 
 // Langue par défaut (utilisée si aucune langue n'est spécifiée ou si la langue de l'utilisateur n'est pas disponible)
 const defaultLanguage = "en";

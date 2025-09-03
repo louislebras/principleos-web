@@ -1,0 +1,41 @@
+<div class="modal modal-example">
+    <div class="modal-content">
+        <div class="blur-back-waitlist"></div>
+        <div class="waitlist-wrapper-form">
+            <p class="lss-size">Join Waitlist</p>
+            <form id="form">
+                <input type="text" name="name" placeholder="Nom" />
+                <input type="email" name="email" placeholder="Email" />
+                <button type="submit">Envoyer</button>
+            </form>
+
+            <script>
+                const scriptURL = 'https://script.google.com/macros/s/AKfycbzwTExyrNGBHNxBLf5t7mhCbAGjuNBFqC-8YEll6ZR7u-nYikCfMpkkdnr1CXhHIYk/exec';
+
+                document.getElementById('form').addEventListener('submit', async (e) => {
+                    e.preventDefault();
+
+                    const data = {
+                        name: e.target.name.value,
+                        email: e.target.email.value
+                    };
+
+                    try {
+                        const res = await fetch(scriptURL, {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify(data)
+                        });
+
+                        const result = await res.json();
+                        alert(result.result === 'success' ? "✅ Enregistré dans la Google Sheet" : "❌ Erreur à l'enregistrement");
+                    } catch (err) {
+                        alert("Erreur réseau ou script : " + err.message);
+                        console.error(err);
+                    }
+                });
+            </script>
+        </div>
+
+    </div>
+</div>

@@ -5,7 +5,8 @@ body {
   flex-direction: column;
   background-color: $background-primary;
   color: $text-primary;
-  font-family: "Louize";
+  font-family: "Inter";
+  letter-spacing: -0.01em;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
