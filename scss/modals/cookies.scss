@@ -49,3 +49,10 @@
     }
   }
 }
+
+@media (max-width: 850px) {
+  .modal-cookies {
+    left: 50%;
+    transform: translate(-50%, 0%);
+  }
+}

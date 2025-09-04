@@ -46,6 +46,12 @@
   border: 1px solid #000;
 }
 
+@media (max-width: 850px) {
+  .modal-cookies {
+    left: 50%;
+    transform: translate(-50%, 0%);
+  }
+}
 .waitlist-wrapper-form {
   display: flex;
   flex-direction: column;
