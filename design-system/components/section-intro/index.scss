@@ -32,3 +32,12 @@
     }
   }
 }
+
+@media (max-width: 850px) {
+  .section-intro-component {
+    width: 90%;
+    p {
+      max-width: 100%;
+    }
+  }
+}

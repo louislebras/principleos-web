@@ -1,1 +1,1 @@
-footer{bottom:40px;left:50%;position:fixed;transform:translate(-50%)}footer .list-footer-items{align-items:center;display:flex;gap:30px;justify-content:center}
+footer{bottom:40px;left:50%;position:fixed;transform:translate(-50%)}footer .list-footer-items{align-items:center;display:flex;gap:30px;justify-content:center}@media (max-width:800px){footer .list-footer-items{flex-direction:column;gap:12px}}

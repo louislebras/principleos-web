@@ -29,9 +29,42 @@
 <div id="pageContent"><link rel="stylesheet" href="/css/pages/home.css">
 
 <div class="fixed-blur-info">
-    <p class="xs-size grey">
-        The engine runs. We’re now documenting how it works (built with PrincipleOS™)
+    <p class="xs-size grey text-center">
+        The engine runs. We’re now documenting how it works <span class="no-mobile">(built with
+            PrincipleOS™)</span>
     </p>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            if (window.innerWidth >= 850) return;
+
+            const target = document.querySelector(".fixed-blur-info");
+            if (!target) return;
+
+            let hidden = false;
+
+
+            target.style.transition = "opacity 0.5s ease";
+
+            window.addEventListener("scroll", () => {
+                if (hidden) return;
+
+                const scrollY = window.scrollY || window.pageYOffset;
+                const triggerPoint = window.innerHeight * 0.15;
+
+                if (scrollY > triggerPoint) {
+                    hidden = true;
+
+
+                    target.style.opacity = "0";
+
+
+                    setTimeout(() => {
+                        target.style.display = "none";
+                    }, 1000);
+                }
+            });
+        });
+    </script>
 </div>
 
 <main>
@@ -41,13 +74,14 @@
     For Startups, Agencies, Developers &amp; Entrepreneurs
 </p>
         <div class="description-text-component s-size description-principleos-heading text-center">
-    <p>A radical new OS to build anything on the web — sites, apps, experiences</p>
-    <p class="grey">Simple enough for a 7-year-old, powerful to ship — no delays, <br> no excuses —
+    <p>A radical new OS to build anything on the web. <br> Websites, eCommerce,
+            apps, experiences.</p>
+    <p class="grey">Simple enough for a 7-year-old, powerful to ship — no delays, <br class="no-mobile"> no excuses —
             landings, e-commerce, SaaS, everything.</p>
 </div>
         <div class="container-btns-heading">
             <div class="main-button-black-component">
-    <a href="">
+    <a href="/documentation">
         Get Started
     </a>
 </div>
@@ -58,7 +92,7 @@
         <span>→</span>
     </a>
 </div>
-            <div class="main-button-grey-component">
+            <div class="main-button-grey-component no-mobile">
     <a href="">
         View on Github
     </a>
@@ -77,10 +111,11 @@
     <div class="introduction-home">
         <div class="section-intro-component">
     <h2 class="lss-size">Meet Principle OS™</h2>
-    <p class="s-size">Currently in open beta for entrepreneurs, startup and companies.</p>
+    <p class="s-size">Currently in open beta for entrepreneurs, <br class="only-mobile"> startup and
+            companies.</p>
     <div class="container-ctas-section-intro">
         <a href="" class="btn-rounded">Open Documentation</a>
-        <a href="" class="grey link-hover">→ Need help ? Reach out.</a>
+        <a href="" class="grey link-hover">→ Need help ?</a>
     </div>
 </div>
         <div class="container-cover-intro-home">
@@ -95,7 +130,8 @@
     <div class="features-home">
         <div class="section-intro-component">
     <h2 class="lss-size">An all in one OS</h2>
-    <p class="s-size">PrincipleOS doens’t reinvent the web promise. <br> It finally keeps it.</p>
+    <p class="s-size">PrincipleOS doens’t reinvent the web promise. <br> It finally keeps
+            it.</p>
     <div class="container-ctas-section-intro">
         <a href="" class="btn-rounded">Get Started</a>
         <a href="" class="grey link-hover">→ Need help ? Reach out.</a>
@@ -153,7 +189,7 @@
         <img class="nails-principle" src="/assets/media/nails-of-first-principles-principleos.png" alt="Nails Of First Principles Principleos">
         <div class="section-intro-component">
     <h2 class="lss-size">PrincipleOS breaks <br> the build and ship lie.</h2>
-    <p class="s-size"><span class="grey">Platforms hold you back. Frameworks slow you down. <br>
+    <p class="s-size"><span class="grey">Platforms hold you back. Frameworks slow you down. <br class="no-mobile">
                 This OS delete the gap between idea and execution.</span> <br>
             Discover Principle OS™ first principles.</p>
     <div class="container-ctas-section-intro">
@@ -170,7 +206,7 @@
             <div class="feature-block-content-only-component">
     <p class="s-size">System-First Velocity</p>
     <p class="s-size grey">Build fast — not from scratch, <br> But from your own design system. <br>
-                Modular layouts. Shared components. And more. <br>
+                Modular layouts. Shared components. And more. <br class="no-mobile">
                 Build in 164 languages. In only 4 minutes. <br> A framework powered with AI.
 </p></div>
             <div class="feature-block-content-only-component">
@@ -193,9 +229,9 @@
 
         <p class="s-size manifest-text text-center">
             <span class="grey">
-                Build faster. Design deeper. Own your stack. Ship what matters. <br>
-                No noise. No delay. Just ideas, turned into products — in your hands. <br>
-                The Forbidden OS to Ship Billion-Dollar Companies. <br>
+                Build faster. Design deeper. Own your stack. Ship what matters. <br class="no-mobile">
+                No noise. No delay. Just ideas, turned into products — in your hands. <br class="no-mobile">
+                The Forbidden OS to Ship Billion-Dollar Companies. <br class="no-mobile">
                 In Days. Not Months. <br> <br>
             </span>
 

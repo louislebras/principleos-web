@@ -3,39 +3,13 @@
         <div class="blur-back-waitlist"></div>
         <div class="waitlist-wrapper-form">
             <p class="lss-size">Join Waitlist</p>
-            <form id="form">
-                <input type="text" name="name" placeholder="Nom" />
-                <input type="email" name="email" placeholder="Email" />
-                <button type="submit">Envoyer</button>
+            <form action="https://formspree.io/f/xldwogpa" method="POST">
+                <input class="name-waitlist" type="text" name="name" placeholder="Name" required />
+                <input class="email-waitlist" type="email" name="email" placeholder="E-mail" required />
+                <button type="submit">Join</button>
             </form>
+            <p class="close-modal s-size link-hover grey">← Back</p>
 
-            <form id="form">
-                <input type="text" name="name" placeholder="Nom" />
-                <input type="email" name="email" placeholder="Email" />
-                <button type="submit">Envoyer</button>
-            </form>
-
-            <script>
-                const scriptURL = 'https://script.google.com/macros/s/AKfycbx1t8Ml8sAbrv8bv93c23sInlv21NiCq3I9G3oUjoamPQMiQz-dwBUZg6rK8_sYe75Ipg/exec';
-
-                document.getElementById('form').addEventListener('submit', async (e) => {
-                    e.preventDefault();
-                    const form = e.target;
-                    const formData = new FormData(form);
-
-                    try {
-                        const res = await fetch(scriptURL, {
-                            method: 'POST',
-                            body: formData
-                        });
-
-                        const result = await res.json();
-                        alert(result.result === 'success' ? '✅ Enregistré dans Google Sheet' : '❌ Échec à l’enregistrement');
-                    } catch (err) {
-                        alert('Erreur : ' + err.message);
-                    }
-                });
-            </script>
         </div>
 
     </div>

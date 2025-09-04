@@ -10,3 +10,10 @@ footer .list-footer-items {
   justify-content: center;
   gap: 30px;
 }
+
+@media (max-width: 800px) {
+  footer .list-footer-items {
+    flex-direction: column;
+    gap: 12px;
+  }
+}

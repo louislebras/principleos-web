@@ -14,3 +14,9 @@
     line-height: 140%;
   }
 }
+
+@media (max-width: 850px) {
+  .feature-block-content-only-component {
+    width: 90%;
+  }
+}

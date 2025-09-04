@@ -13,6 +13,7 @@ main {
   left: 0;
   top: 0;
 }
+
 .container-center-waiting {
   display: flex;
   align-items: center;
@@ -21,6 +22,12 @@ main {
 
   img {
     width: 180px;
+  }
+
+  @media (max-width: 800px) {
+    img {
+      width: 150px;
+    }
   }
 
   div {
@@ -40,8 +47,19 @@ main {
     padding: 12px 21px;
   }
 
+  @media (max-width: 800px) {
+    .principle-word {
+      margin-top: 20px;
+    }
+  }
+
   .doc-info {
     margin-top: 20px;
+  }
+  @media (max-width: 800px) {
+    .doc-info {
+      margin-top: 10px;
+    }
   }
 
   button {
@@ -61,5 +79,11 @@ main {
       color: white !important;
       border: 1px solid #000;
     }
+  }
+}
+
+@media (max-width: 800px) {
+  .container-center-waiting {
+    margin-bottom: 17vh;
   }
 }

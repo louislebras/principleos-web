@@ -8,3 +8,9 @@
     width: 10px;
   }
 }
+
+@media (max-width: 850px) {
+  .trust-data-line-component {
+    left: 0;
+  }
+}

@@ -9,6 +9,47 @@
   transform: translate(-50%, -50%);
   z-index: 10;
 }
+.waitlist-wrapper-form form {
+  display: flex;
+  align-items: center;
+  border-radius: 14px;
+  background: rgba(232, 232, 232, 0.37);
+  backdrop-filter: blur(12px);
+  padding: 12px 21px;
+  margin-top: 20px;
+}
+.waitlist-wrapper-form form input {
+  border: none;
+  outline: none;
+}
+.waitlist-wrapper-form form button {
+  display: flex;
+  padding: 6px 12px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 53px;
+  border: 1px solid #f3f3f3;
+  background: #fff;
+  outline: none;
+  transition: 0.3s ease;
+  width: fit-content;
+}
+.waitlist-wrapper-form form button:hover {
+  background-color: black;
+  color: white !important;
+  border: 1px solid #000;
+}
+.waitlist-wrapper-form form .name-waitlist {
+  width: 80px;
+}
+.waitlist-wrapper-form form .email-waitlist {
+  width: auto;
+}
+
+.close-modal {
+  margin-top: 40px;
+  cursor: pointer;
+}
 
 .blur-back-waitlist {
   width: 100vw;

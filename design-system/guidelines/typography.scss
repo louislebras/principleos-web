@@ -25,6 +25,10 @@
   font-family: "Inter" !important;
 }
 
+button {
+  color: #000;
+}
+
 // Text Colors
 .text-color-secondary {
   color: $text-secondary;
@@ -123,8 +127,14 @@ input {
 .xs-size {
   font-size: 10px;
 }
+
+@media (max-width: 850px) {
+  .xs-size {
+    font-size: 11px;
+  }
+}
 .s-size {
-  font-size: 12px;
+  font-size: 13px;
 }
 .sx-size {
   font-size: 14px;
@@ -170,6 +180,12 @@ input {
   letter-spacing: -0.05em;
 }
 
+@media (max-width: 850px) {
+  .lss-size {
+    font-size: 28px;
+  }
+}
+
 .xl-size {
   font-size: 64px;
 }
@@ -180,6 +196,13 @@ input {
   font-weight: 500;
   line-height: 110%; /* 112.2px */
   letter-spacing: -5.1px;
+}
+
+@media (max-width: 850px) {
+  .ultra-size {
+    font-size: 52px;
+    letter-spacing: -2.8px;
+  }
 }
 
 .center {

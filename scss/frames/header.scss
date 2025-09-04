@@ -15,6 +15,14 @@ header {
   z-index: 1000;
 }
 
+@media (max-width: 850px) {
+  header {
+    width: 60vw;
+    top: 40px;
+    min-width: 220px;
+  }
+}
+
 .principle-wordmark {
   font-size: 20px;
   line-height: 110%;
