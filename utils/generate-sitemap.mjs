@@ -1,90 +1,96 @@
 // utils/generate-sitemap.mjs
-
 import fs from "fs";
 import path from "path";
 import xml from "xml";
-import { baseUrl } from "../config/config-app.js"; // Import de baseUrl
+import { baseUrl } from "../config/config-app.js";
 
-// 📂 Dossier contenant les pages générées
+// 📁 Dossier des pages générées
 const pagesDir = path.join(process.cwd(), "dist");
 
-// 🔄 Fonction pour parcourir les fichiers de manière récursive
+// ❌ Nom du dossier à exclure (ex: "modals")
+const EXCLUDED_FOLDER = "modals";
+
+// 🔁 Fonction récursive pour récupérer tous les fichiers "index.html"
 function getFiles(dir, fileList = []) {
   const files = fs.readdirSync(dir);
 
   files.forEach((file) => {
     const filePath = path.join(dir, file);
-    if (fs.statSync(filePath).isDirectory()) {
-      getFiles(filePath, fileList);
+    const isDirectory = fs.statSync(filePath).isDirectory();
+
+    if (isDirectory) {
+      // Exclure les dossiers dont le nom correspond à EXCLUDED_FOLDER
+      if (path.basename(filePath) !== EXCLUDED_FOLDER) {
+        getFiles(filePath, fileList);
+      }
     } else if (file === "index.html") {
       const relativePath = filePath.replace(pagesDir, "").replace(/\\/g, "/");
-      fileList.push(relativePath);
+
+      // Ne pas inclure les fichiers dont le chemin commence par /modals
+      if (!relativePath.startsWith(`/${EXCLUDED_FOLDER}/`)) {
+        fileList.push(relativePath);
+      }
     }
   });
 
   return fileList;
 }
 
-// 🔍 Récupérer tous les fichiers index.html
+// 📄 Récupérer tous les fichiers index.html valides
 const files = getFiles(pagesDir);
 
-// 🌍 Détecter les langues présentes en comparant les structures
+// 🌐 Détection des langues
 const rootStructure = new Set();
 const languages = new Set();
 
 files.forEach((file) => {
   const parts = file.split("/").filter(Boolean);
-
   if (parts.length === 1) {
-    rootStructure.add(parts[0]); // Ajouter les pages de la racine
+    rootStructure.add(parts[0]);
   } else if (!rootStructure.has(parts[0])) {
-    languages.add(parts[0]); // Ajouter comme langue détectée si la structure est similaire
+    languages.add(parts[0]);
   }
 });
 
-// 🔗 Générer les URLs des pages avec les bonnes priorités
-const urlSet = new Set(); // Évite les doublons
+// 🔗 Construction des URLs avec gestion des priorités
+const urlSet = new Set();
 const urls = [];
 
 files.forEach((file) => {
-  const route = file.replace("/index.html", ""); // Supprimer "index.html"
-  const fullUrl = `${baseUrl}${route}`; // Utilisation de baseUrl importé
+  const route = file.replace("/index.html", "");
+  const fullUrl = `${baseUrl}${route}`;
 
   if (!urlSet.has(fullUrl)) {
     urlSet.add(fullUrl);
 
-    // Détecter si c'est une langue
     const parts = route.split("/").filter(Boolean);
     const isLang = parts.length > 0 && languages.has(parts[0]);
 
-    // Déterminer la priorité en fonction de la structure
     let priority;
     if (parts.length === 0 || (parts.length === 1 && isLang)) {
-      priority = 1.0; // Home principale et langues
+      priority = 1.0;
     } else if (parts.length === 1 || (parts.length === 2 && isLang)) {
-      priority = 0.9; // Pages secondaires
+      priority = 0.9;
     } else {
-      priority = 0.8; // Pages en sous-dossiers
+      priority = 0.8;
     }
 
     urls.push({
       loc: fullUrl,
       changefreq: "weekly",
-      priority: priority,
+      priority,
       lastmod: new Date().toISOString(),
     });
   }
 });
 
-// 🔢 Trier les URLs par priorité décroissante et ordre alphabétique
+// 📊 Tri des URLs par priorité décroissante puis par ordre alphabétique
 urls.sort((a, b) => {
-  if (b.priority !== a.priority) {
-    return b.priority - a.priority;
-  }
+  if (b.priority !== a.priority) return b.priority - a.priority;
   return a.loc.localeCompare(b.loc);
 });
 
-// 📜 Générer le fichier sitemap.xml en format XML propre
+// 🧾 Génération du sitemap XML
 const sitemap = xml(
   [
     {
@@ -104,9 +110,7 @@ const sitemap = xml(
   { declaration: true }
 );
 
-// 💾 Sauvegarder le fichier sitemap.xml
+// 💾 Écriture dans le fichier sitemap.xml
 fs.writeFileSync("sitemap.xml", sitemap);
 
-console.log(
-  "✅ Sitemap généré avec succès, bien structuré avec détection automatique des langues !"
-);
+console.log("✅ Sitemap généré avec succès, dossier 'modals' exclu !");
