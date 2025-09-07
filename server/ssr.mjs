@@ -611,12 +611,31 @@ async function generateLayoutMap() {
   console.log(`✅ layout-map.json généré à ${outputPath}`);
 }
 
-// Générer automatiquement le fichier _redirects pour fallback 404
-function generateRedirectsFile() {
-  const redirectsPath = path.join(DIST_PATH, "_redirects");
-  const content = "/*    /404/    404\n";
-  fs.writeFileSync(redirectsPath, content, "utf8");
-  console.log("✅ Fichier _redirects généré pour gestion 404.");
+// // Générer automatiquement le fichier _redirects pour fallback 404
+// async function generateRedirectsFile() {
+//   const redirectsPath = path.join(DIST_PATH, "_redirects");
+//   const content = "/*    /404/    404\n";
+//   fs.writeFileSync(redirectsPath, content, "utf8");
+//   console.log("✅ Fichier _redirects généré pour gestion 404.");
+// }
+
+function generateRoot404Redirect() {
+  const html = `<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="refresh" content="0; url=/404/" />
+    <title>Redirecting…</title>
+  </head>
+  <body>
+    <p>Redirecting to <a href="/404/">/404/</a></p>
+  </body>
+</html>`;
+  const outputPath = path.join(DIST_PATH, "404.html");
+  fs.writeFileSync(outputPath, html, "utf8");
+  console.log(
+    "✅ Fichier 404.html généré à la racine (redirection vers /404/)"
+  );
 }
 
 async function generatePage(filePath, lang, isPrimaryLang = false) {
@@ -861,7 +880,8 @@ async function buildSite() {
   copyFolder(path.resolve("config"), path.join(DIST_PATH, "config"));
 
   collectDesignSystemClassNames();
-  generateRedirectsFile();
+  // generateRedirectsFile();
+  generateRoot404Redirect(); // ← ajoute cette ligne
 
   // Générer les MODALS pour chaque langue
   for (const lang of availableLanguages) {
