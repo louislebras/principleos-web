@@ -381,6 +381,9 @@ input {
   border: 1px solid #f9f9f9;
   font-size: 11px;
   transition: 0.3s ease;
+  text-align: center;
+  width: fit-content;
+  outline: none;
 }
 .main-button-grey-alt-component a:hover {
   border: 1px solid #ececec;
@@ -394,9 +397,31 @@ input {
   border: 1px solid #f9f9f9;
   font-size: 11px;
   transition: 0.3s ease;
+  text-align: center;
+  width: fit-content;
+  outline: none;
 }
 .main-button-grey-component a:hover {
   border: 1px solid #ececec;
+}
+
+.main-button-black-target-blank-component a {
+  display: flex;
+  padding: 11px 16px;
+  border-radius: 12px;
+  background: #272727;
+  border: 1px solid #272727;
+  font-size: 11px;
+  transition: 0.3s ease;
+  color: white;
+  text-align: center;
+  width: fit-content;
+  outline: none;
+}
+.main-button-black-target-blank-component a:hover {
+  background-color: #f9f9f9;
+  border: 1px solid #ececec;
+  color: black;
 }
 
 .main-button-black-component a {
@@ -408,6 +433,9 @@ input {
   font-size: 11px;
   transition: 0.3s ease;
   color: white;
+  text-align: center;
+  width: fit-content;
+  outline: none;
 }
 .main-button-black-component a:hover {
   background-color: #f9f9f9;
@@ -960,6 +988,9 @@ sup {
   border: 1px solid #f9f9f9;
   font-size: 11px;
   transition: 0.3s ease;
+  text-align: center;
+  width: fit-content;
+  outline: none;
 }
 .main-button-grey-alt-component a:hover {
   border: 1px solid #ececec;
@@ -973,9 +1004,31 @@ sup {
   border: 1px solid #f9f9f9;
   font-size: 11px;
   transition: 0.3s ease;
+  text-align: center;
+  width: fit-content;
+  outline: none;
 }
 .main-button-grey-component a:hover {
   border: 1px solid #ececec;
+}
+
+.main-button-black-target-blank-component a {
+  display: flex;
+  padding: 11px 16px;
+  border-radius: 12px;
+  background: #272727;
+  border: 1px solid #272727;
+  font-size: 11px;
+  transition: 0.3s ease;
+  color: white;
+  text-align: center;
+  width: fit-content;
+  outline: none;
+}
+.main-button-black-target-blank-component a:hover {
+  background-color: #f9f9f9;
+  border: 1px solid #ececec;
+  color: black;
 }
 
 .main-button-black-component a {
@@ -987,6 +1040,9 @@ sup {
   font-size: 11px;
   transition: 0.3s ease;
   color: white;
+  text-align: center;
+  width: fit-content;
+  outline: none;
 }
 .main-button-black-component a:hover {
   background-color: #f9f9f9;

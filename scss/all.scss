@@ -438,6 +438,9 @@ $text-secondary: $color-neutral-700;
     border: 1px solid #f9f9f9;
     font-size: 11px;
     transition: 0.3s ease;
+    text-align: center;
+    width: fit-content;
+    outline: none;
 
     &:hover {
       border: 1px solid #ececec;
@@ -454,9 +457,34 @@ $text-secondary: $color-neutral-700;
     border: 1px solid #f9f9f9;
     font-size: 11px;
     transition: 0.3s ease;
+    text-align: center;
+    width: fit-content;
+    outline: none;
 
     &:hover {
       border: 1px solid #ececec;
+    }
+  }
+}
+
+.main-button-black-target-blank-component {
+  a {
+    display: flex;
+    padding: 11px 16px;
+    border-radius: 12px;
+    background: #272727;
+    border: 1px solid #272727;
+    font-size: 11px;
+    transition: 0.3s ease;
+    color: white;
+    text-align: center;
+    width: fit-content;
+    outline: none;
+
+    &:hover {
+      background-color: #f9f9f9;
+      border: 1px solid #ececec;
+      color: black;
     }
   }
 }
@@ -471,6 +499,9 @@ $text-secondary: $color-neutral-700;
     font-size: 11px;
     transition: 0.3s ease;
     color: white;
+    text-align: center;
+    width: fit-content;
+    outline: none;
 
     &:hover {
       background-color: #f9f9f9;
@@ -1051,6 +1082,9 @@ sup {
     border: 1px solid #f9f9f9;
     font-size: 11px;
     transition: 0.3s ease;
+    text-align: center;
+    width: fit-content;
+    outline: none;
 
     &:hover {
       border: 1px solid #ececec;
@@ -1067,9 +1101,34 @@ sup {
     border: 1px solid #f9f9f9;
     font-size: 11px;
     transition: 0.3s ease;
+    text-align: center;
+    width: fit-content;
+    outline: none;
 
     &:hover {
       border: 1px solid #ececec;
+    }
+  }
+}
+
+.main-button-black-target-blank-component {
+  a {
+    display: flex;
+    padding: 11px 16px;
+    border-radius: 12px;
+    background: #272727;
+    border: 1px solid #272727;
+    font-size: 11px;
+    transition: 0.3s ease;
+    color: white;
+    text-align: center;
+    width: fit-content;
+    outline: none;
+
+    &:hover {
+      background-color: #f9f9f9;
+      border: 1px solid #ececec;
+      color: black;
     }
   }
 }
@@ -1084,6 +1143,9 @@ sup {
     font-size: 11px;
     transition: 0.3s ease;
     color: white;
+    text-align: center;
+    width: fit-content;
+    outline: none;
 
     &:hover {
       background-color: #f9f9f9;

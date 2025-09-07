@@ -619,23 +619,31 @@ async function generateLayoutMap() {
 //   console.log("✅ Fichier _redirects généré pour gestion 404.");
 // }
 
-function generateRoot404Redirect() {
-  const html = `<!DOCTYPE html>
-<html lang="en">
+function generateRoot404RedirectPerLanguage() {
+  for (const lang of availableLanguages) {
+    const isPrimaryLang = isDefaultLanguage(lang);
+    const redirectPath = isPrimaryLang ? "/404/" : `/${lang}/404/`;
+
+    const html = `<!DOCTYPE html>
+<html lang="${lang}">
   <head>
     <meta charset="UTF-8" />
     <title>404</title>
     <script>
-      window.location.replace("/404/");
+      window.location.replace("${redirectPath}");
     </script>
   </head>
   <body></body>
 </html>`;
-  const outputPath = path.join(DIST_PATH, "404.html");
-  fs.writeFileSync(outputPath, html, "utf8");
-  console.log(
-    "✅ Fichier 404.html avec redirection JS instantanée généré à la racine."
-  );
+
+    const outputPath = isPrimaryLang
+      ? path.join(DIST_PATH, "404.html")
+      : path.join(DIST_PATH, lang, "404.html");
+
+    fs.mkdirSync(path.dirname(outputPath), { recursive: true });
+    fs.writeFileSync(outputPath, html, "utf8");
+    console.log(`✅ 404.html généré pour ${lang} → ${redirectPath}`);
+  }
 }
 
 async function generatePage(filePath, lang, isPrimaryLang = false) {
@@ -880,9 +888,7 @@ async function buildSite() {
   copyFolder(path.resolve("config"), path.join(DIST_PATH, "config"));
 
   collectDesignSystemClassNames();
-  // generateRedirectsFile();
-  generateRoot404Redirect(); // ← ajoute cette ligne
-
+  generateRoot404RedirectPerLanguage();
   // Générer les MODALS pour chaque langue
   for (const lang of availableLanguages) {
     const isPrimaryLang = isDefaultLanguage(lang);

@@ -9,6 +9,28 @@
   max-width: 900px;
   margin-top: 20px;
 }
+.heading-whitepaper .container-buttons-whitepaper {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+.heading-whitepaper .container-buttons-whitepaper .open-waitlist-btn {
+  display: flex;
+  gap: 50px;
+  padding: 11px 16px;
+  border-radius: 12px;
+  background: #f9f9f9;
+  border: 1px solid #f9f9f9;
+  font-size: 11px;
+  transition: 0.3s ease;
+  text-align: center;
+  width: fit-content;
+  outline: none;
+  cursor: pointer;
+}
+.heading-whitepaper .container-buttons-whitepaper .open-waitlist-btn:hover {
+  border: 1px solid #ececec;
+}
 .heading-whitepaper .description-subtitle-component {
   margin-top: 20px;
 }
