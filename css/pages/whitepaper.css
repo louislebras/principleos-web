@@ -1,0 +1,17 @@
+.heading-whitepaper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 0vh;
+}
+.heading-whitepaper h2 {
+  width: 65%;
+  max-width: 900px;
+  margin-top: 20px;
+}
+.heading-whitepaper .description-subtitle-component {
+  margin-top: 20px;
+}
+.heading-whitepaper .description-text-component {
+  margin-top: 20px;
+}

@@ -1,0 +1,13 @@
+.content-chapter-component {
+  margin-top: 20vh;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 450px;
+  p {
+    line-height: 180%;
+    font-size: 14px !important;
+  }
+}

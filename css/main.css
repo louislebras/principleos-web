@@ -156,7 +156,7 @@ input {
 }
 .ls-size {
   font-size: 22px;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.035em;
   line-height: 135% !important;
 }
 
@@ -182,7 +182,9 @@ input {
   }
 }
 .xl-size {
-  font-size: 64px;
+  font-size: 28px;
+  letter-spacing: -0.04em;
+  line-height: 125%;
 }
 
 .ultra-size {
@@ -264,6 +266,30 @@ input {
     max-width: 100%;
   }
 }
+.image-wrapper-transparent-component {
+  width: 65vw;
+  height: 40vh;
+  max-width: 600px;
+  margin-top: 30px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 9999900px;
+  display: flex;
+  align-items: center;
+  border: 1px solid rgba(218, 218, 218, 0.4470588235);
+  background-color: #fbfbfb;
+  justify-content: center;
+}
+.image-wrapper-transparent-component img {
+  height: 52%;
+}
+
+@media (max-width: 850px) {
+  .image-wrapper-transparent-component {
+    width: 90%;
+    height: 30vh;
+  }
+}
 .feature-block-content-only-component {
   width: 35vw;
   max-width: 450px;
@@ -330,6 +356,20 @@ input {
   border-radius: 10px;
   border: 1px solid #f4f4f4;
   background: #fbfbfb;
+}
+
+.content-chapter-component {
+  margin-top: 20vh;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 450px;
+}
+.content-chapter-component p {
+  line-height: 180%;
+  font-size: 14px !important;
 }
 
 .main-button-grey-alt-component a {
@@ -805,6 +845,30 @@ sup {
     max-width: 100%;
   }
 }
+.image-wrapper-transparent-component {
+  width: 65vw;
+  height: 40vh;
+  max-width: 600px;
+  margin-top: 30px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 9999900px;
+  display: flex;
+  align-items: center;
+  border: 1px solid rgba(218, 218, 218, 0.4470588235);
+  background-color: #fbfbfb;
+  justify-content: center;
+}
+.image-wrapper-transparent-component img {
+  height: 52%;
+}
+
+@media (max-width: 850px) {
+  .image-wrapper-transparent-component {
+    width: 90%;
+    height: 30vh;
+  }
+}
 .feature-block-content-only-component {
   width: 35vw;
   max-width: 450px;
@@ -871,6 +935,20 @@ sup {
   border-radius: 10px;
   border: 1px solid #f4f4f4;
   background: #fbfbfb;
+}
+
+.content-chapter-component {
+  margin-top: 20vh;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 450px;
+}
+.content-chapter-component p {
+  line-height: 180%;
+  font-size: 14px !important;
 }
 
 .main-button-grey-alt-component a {

@@ -1,0 +1,1078 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" href="https://principleos.com/assets/favicon.png/">
+    <link rel="shortcut icon" href="https://principleos.com/assets/favicon.png/" type="image/png">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/modals/allmodals.css">
+    <script type="module" src="../js/lang-redirect.js" defer=""></script>
+    <script type="module" src="../js/language-switcher.js" defer=""></script>
+    <script type="module" src="../js/router.js" defer=""></script>
+    <script type="module" src="../js/localhostlinks.js" defer=""></script>
+    </head><body class="s-size">
+    <link rel="stylesheet" href="../css/pages/index.css">
+
+
+
+
+    <link rel="stylesheet" href="../css/frames/header.css">
+
+<header class="header">
+    <p class="principle-wordmark">Principle™</p>
+    <div class="container-menu">
+        <img class="logo-principle-os-menu" src="../assets/media/logo-principle-os.svg" alt="Logo Principle Os">
+        <div class="btn-menu">
+            <img src="../../assets/icons/icon-menu-grey.svg" alt="Icon Menu Grey">
+        </div>
+    </div>
+</header>
+<div id="pageContent"><link rel="stylesheet" href="../css/pages/home.css">
+<link rel="stylesheet" href="../css/pages/whitepaper.css">
+<div class="fixed-blur-info">
+    <p class="xs-size grey text-center">
+        The engine runs. We’re now documenting how it works <span class="no-mobile">(built with
+            PrincipleOS™)</span>
+    </p>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            if (window.innerWidth >= 850) return;
+
+            const target = document.querySelector(".fixed-blur-info");
+            if (!target) return;
+
+            let hidden = false;
+
+
+            target.style.transition = "opacity 0.5s ease";
+
+            window.addEventListener("scroll", () => {
+                if (hidden) return;
+
+                const scrollY = window.scrollY || window.pageYOffset;
+                const triggerPoint = window.innerHeight * 0.15;
+
+                if (scrollY > triggerPoint) {
+                    hidden = true;
+
+
+                    target.style.opacity = "0";
+
+
+                    setTimeout(() => {
+                        target.style.display = "none";
+                    }, 1000);
+                }
+            });
+        });
+    </script>
+</div>
+<main>
+    <div class="heading-whitepaper">
+        <h1 class="ultra-size">Principle <span>OS</span></h1>
+        <h2 class="ls-size text-center">An Operating System to Build Everything on the Web without
+            Permission in Days.
+        </h2>
+
+        <p class="description-subtitle-component">
+    A return to first principles: Freedom to design, ship, and scale.
+</p>
+
+        <a target="_blank" href="https://louislebras.com/">
+            <div class="description-text-component">
+    <p>Louis Le Bras</p>
+    <p class="grey">September 07, 2025</p>
+</div>
+        </a>
+        <div class="image-wrapper-transparent-component">
+    <img src="../assets/media/junction-of-first-principles-principleos.png" alt="Junction Of First Principles Principleos">
+</div>
+
+    </div>
+
+    <div class="content-whitepaper-principle">
+        <div class="content-chapter-component">
+    <h3 class="ls-size">Abstract</h3>
+    <p class="s-size">The web is going through a silent crisis few dare to name. <br> <br> Visual platforms
+            like
+            Webflow, Framer and WordPress sell
+            simplicity <span class="grey">(which, in reality, doesn’t exist — it’s a sales pitch, not a
+                principle.)</span> These
+            tools inevitably
+            grow more complex over
+            time, especially the moment you go beyond default use cases. And in return of this "freedom"
+            they promise,
+            they impose
+            structure,
+            constraints, and technical debt. Their code is opaque,
+            heavy,
+            unmaintainable. You don’t own it — you subscribe to it. You build faster, yes, but only within their box. No
+            deep
+            customization. No native performance. No real autonomy. <br> <br> And complex frameworks like React or Vue
+            (and their
+            environments, like Next.js), which offer full control and scalability but remain inaccessible to those who
+            don’t code
+            for a living. They demand expertise, configuration, deployment pipelines, and deep abstraction layers.
+            They’re open, yes
+            — but intimidating and slow to ship. Between those two worlds, something essential has been lost. The web
+            became either
+            too rigid or too complex. It is no longer in the hands of its creators. It became slow, dependent, and
+            constrained —
+            trapped inside the very tools that once promised freedom. <br> <br> Platforms hold you back. Frameworks slow
+            you down.
+            So we built
+            something radically different. Not another CMS. Not another builder. Not another framework. We burned
+            everything down —
+            and rebuilt what actually matters. A way to build any site, app, or experience, as fast as you can imagine
+            it, without
+            sacrificing ownership, performance, or clarity. <br> <br> Principle OS doesn’t reinvent the promise of the
+            web. <br>
+            <span class="grey">It
+                finally keeps
+                it.</span> <br> <br> Built entirely on first principles—HTML, SCSS, JS and JSON, designers,
+            entrepreneurs, and
+            product
+            builders can now
+            create fully-functional websites, apps, and digital experiences using their own design system,
+            structured
+            layouts, and
+            modular components, assembled with total control, clarity, and speed. <br> <br> Content is managed in
+            lightweight
+            JSON. Shared
+            elements like headers, footers, and layouts are native and centralized. Advanced features like modals,
+            A/B
+            tests, and
+            e-commerce flows are native integrations. No vendor lock-in. No abstraction layers. Just clean,
+            auditable,
+            MIT-licensed
+            code you can own and deploy anywhere. You start by defining your design system. You create blocks,
+            layouts,
+            and
+            templates once. Then you assemble your site with pure HTML and structured content. AI bridges the last
+            remaining gap:
+            JavaScript interactions, localization, and advanced flows are now fully accessible—even to
+            non-developers.
+            <br> <br>
+            With less
+            than 3000 lines of code, Principle OS engine gives you the fastest way to build and scale meaningfully on
+            the
+            open
+            web. Not a
+            builder. Not a CMS. A foundation. For people who want to own what they create—and ship what they mean.</p>
+</div>
+        <div class="content-chapter-component">
+    <h3 class="ls-size">Introduction: <br> <span class="grey">
+                Why We Can’t Ship Anymore
+            </span> </h3>
+    <p class="s-size">The web was born from a promise: that anyone, anywhere, could create. With just a text
+            editor and a browser, you could
+            publish a page, share an idea, build a system. <br> <br> It was simple, accessible, decentralized, and built
+            on a
+            universal
+            grammar — HTML, CSS, and JS. You didn’t need permission. You didn’t need a platform. The web was designed to
+            be a
+            source-based, open, inspectable space. View Source wasn’t a feature — it was a philosophy. Ownership was
+            native.
+            Structure was transparent. Control was total. We’ve come a long way since that version of the web.
+            Today, the web is no longer open terrain — it’s divided. <br> <br> On one side: visual platforms like
+            Webflow, Framer,
+            and
+            WordPress. They promise speed and ease-of-use, but the tradeoffs are real: you build within predefined
+            structures,
+            limited interactions, fixed layouts. Their code is opaque, bloated, and nearly impossible to maintain or
+            migrate. Your
+            website doesn’t belong to you — it belongs to their runtime, their UI, their cloud. You’re building faster,
+            yes — but
+            inside a sandbox. No deep customization. No native performance. No technical ownership. You subscribe to
+            simplicity, and
+            pay with constraints. <br> <br>
+            On the other side: complex frameworks like React, Vue, and their ecosystems — Next.js, Nuxt, Astro. They
+            offer full
+            power and scalability — if you’re a developer. But they come with a steep price in complexity. You must
+            manage
+            components, state, routes, config files, deployment pipelines, and third-party integrations. Even starting
+            from scratch
+            means dealing with CLI tools, build chains, dependencies, headless CMS integrations, and devops decisions.
+            The result is
+            open, yes — but fragile, intimidating, and slow to ship. This is the paradox: the “easy” tools restrict your
+            potential.
+            The “powerful” tools restrict your access. <br> <br> Between those two worlds, something has been lost.
+            If we had to draw a comparison, today’s web isn’t far from the fiat system we live in where <span class="grey">Bitcoin</span> is the
+            antidote.
+            Central frameworks — like React or Vue — act like central banks: powerful, flexible, and theoretically open,
+            but
+            inaccessible without technical literacy. And then come the commercial platforms — the WordPresses, the
+            Webflows, the
+            Framers — like commercial banks built on top of that infrastructure, offering a user-friendly layer that’s
+            tightly
+            controlled, limited in scope, and extractive by design. The final user is rarely the beneficiary — they’re
+            often the one
+            paying the highest cost, in speed, control, and long-term ownership.
+            These platforms claim to be made for the creators — designers, developers, founders — yet they optimize for
+            ROI, not
+            empowerment. What they offer isn’t a creative environment — it’s a product funnel masquerading as a canvas.
+            The problem
+            isn’t that they sell something to a market. The problem is that they do it while pretending to stand with
+            those who
+            build. When in reality, they act more like cartelized institutions — dictating the terms, locking the doors,
+            controlling
+            the experience — all under the pretense of being the only way forward.The underlying problem is systemic:
+            centralization of control, inaccessibility of infrastructure, and asymmetry between those who build and
+            those who
+            benefit. <br> <br>
+            Despite this, some frameworks — like Next.js — have made powerful strides in bridging that gap. They offer
+            excellent
+            performance, clean developer experience, and an open infrastructure that’s admired for good reasons. But
+            they still
+            require you to be a developer. Their simplicity is only visible once you’ve crossed the complexity
+            threshold. They are
+            built for those who already speak the language — not for those who simply want to create. <br> <br>
+            Today’s web is quietly collapsing into cages — not by force, but by convenience. What was once transparent
+            has become
+            opaque. What was once fluid has become rigid. What was once simple has become overwhelming. We’ve accepted a
+            slow web. A
+            dependent web. <br> <br> A creative process where building and understanding are one. A loop where
+            structure
+            serves the creator — not the tool.
+
+            Ideas die in the gap between imagination and execution. Startups ship late. Designers depend on developers.
+            Developers
+            burn time wiring boilerplate, scaffolding projects, fixing mismatched tools. The creative cycle is broken.
+            You’re either
+            locked in, or locked out. You either move fast and lose control — or retain control and move painfully slow.
+            Even
+            something as basic as adding a modal, testing a page, or localizing content becomes a bottleneck.
+            Javascript, once a
+            barrier for non-devs, is still a point of friction. Design systems are often rebuilt for each project. The
+            CMS is
+            separate. The logic is abstracted. The system is too much. And yet — the goal remains simple: to create
+            something that
+            works, that’s yours, and that lasts.
+            This isn’t a call for a better builder. Or a cleaner CMS. Or a smarter framework. It’s a return to what made
+            the web
+            powerful in it's first place. A re-alignment with its first principles: clarity, universality, ownership,
+            and speed. We
+            don’t need more tools. We need a foundation that unites simplicity and power. Something that speaks the
+            language of the
+            web natively. Something that lets you move at the speed of thought — without giving up control. Something
+            that works
+            with AI, not against it. That uses design systems, structured content, and modern flows without depending on
+            third-party
+            abstractions. <br> <br>
+
+            So we built something radically different. Not another CMS. Not another builder. Not another framework.
+            Please no. We
+            burned everything down — and rebuilt what actually matters. A way to build any site, app, or experience, as
+            fast as you
+            can imagine it. Without sacrificing performance, ownership, or understanding. An operating system for the
+            web that
+            doesn’t reinvent the promise — it finally keeps it. Principle OS.</p>
+</div>
+
+        <div class="content-chapter-component">
+    <h3 class="ls-size">1. Execution <br> <span class="grey">Rewired</span> </h3>
+    <p class="s-size">Principle OS doesn’t add new layers — it removes the ones you don’t need. What remains
+            is structure, velocity, and
+            ownership. The modern web doesn’t suffer from a lack of tools — it suffers from broken delivery loops. Ideas
+            die between
+            the moment they’re imagined and the moment they’re shipped. The bottleneck is structural. Designers depend
+            on
+            developers. Developers depend on integrations. Toolchains sprawl. Stack decisions delay projects. Even
+            simple changes
+            require coordination, build steps, and deployment complexity. <br> <br>
+
+            Principle OS introduces a new execution paradigm — not by abstracting further, but by stripping everything
+            down to the
+            essence: a shared grammar of <span class="grey">HTML, SCSS, JSON, and JS</span>. Each has a defined role.
+            HTML structures the
+            interface. SCSS
+            styles it with a clear set of visual tokens. JSON stores content, translations, and data logic. JS is used
+            only where
+            interaction is required — never bloated, never obfuscated. This grammar is universal, simple, and expressive
+            enough to
+            build anything. <br> <br>
+
+            At the heart of the system lies a design system that acts as the project’s execution engine. Rather than
+            imposing a
+            theme or template, Principle OS encourages the creation of a programmable design language. Projects are
+            structured into
+            three atomic layers: components (the smallest UI units), layouts (groupings of components with specific
+            content logic),
+            and templates (full-page structures). These are not locked into proprietary formats — they’re HTML-based,
+            open, and
+            editable. The result is a system that remains consistent without duplicating structure. <br> <br>
+
+            Sites and apps are assembled block-by-block using direct HTML and the building blocks defined in your design
+            system.
+            There’s no JSX, no custom DSL, no rendering engine that transforms the developer’s intent. You write what
+            you see, and
+            what you write ships directly to the browser. The clarity of structure makes debugging, auditing, and
+            iteration vastly
+            faster. It removes ambiguity from execution. Never lose hours hunting a misplaced comma again.
+
+            To handle shared elements — like headers, navbars, and footers — Principle OS employs a native frame system.
+            Frames are
+            defined once and applied to layout groups, which categorize pages by function (e.g., documentation vs.
+            product
+            marketing). This avoids code duplication and ensures consistency across experiences. The structural
+            hierarchy is
+            enforced by the engine itself. To optimize both performance and experience, Principle OS includes a dynamic
+            transition
+            system between pages within the same layout group — allowing shared elements like headers and footers to
+            persist across
+            navigation without reload, delivering a smooth, app-like browsing flow. <br> <br>
+
+            JavaScript, traditionally a barrier for many non-developers, becomes a bridge. Small vanilla snippets are
+            enough to
+            enable advanced behaviors. More importantly, AI can now act as a translator between human intent and JS
+            logic. With
+            clean structure and simple APIs, Principle OS allows AI tools to generate or modify interactions via
+            natural-language
+            prompts — eliminating one of the last technical barriers to execution. JS is no longer a moat, but a
+            membrane.
+
+            This applies equally to third-party integrations. Principle OS makes it trivial to connect with services
+            like Shopify,
+            Notion, Supabase, or Auth0. These connections require no bloated SDKs or vendor-specific setups — just
+            native JS and a
+            few API keys. If a service becomes unreliable, it can be swapped in minutes. The system encourages
+            architectural
+            resilience: decentralized, composable, and fully under your control.From a single lightweight configuration
+            file,
+            Principle OS lets you add or remove as many languages as needed — instantly. You can choose which pages or
+            blocks should
+            be translated automatically, and AI handles the rest. But unlike traditional translation APIs that work
+            word-for-word,
+            this system takes context, nuance, and linguistic patterns into account. It avoids literal renderings and
+            instead
+            generates culturally coherent, search-optimized content for each region. The result: not just multilingual
+            content, but
+            meaningful content — tuned to what people in each country actually care about. <br> <br>
+
+            Technically, the engine runs on a simplified but powerful model. A persistent base.html serves as the root
+            of every
+            page. Routing is handled through flat JSON structures or file maps. No client-side router. No server-side
+            rendering. No
+            bundler. You write code — it runs. You change a page — it updates. Deployment can be handled via any static
+            host, with
+            no build process and zero runtime dependencies.
+
+            The result is performance without compromise. Pages load instantly. Content is semantic, accessible, and
+            SEO-ready.
+            There’s no hydration, no runtime CPU tax, and no mystery components to debug. Everything is human-readable.
+            The entire
+            system — all of it — fits in under 3000 lines of code. It’s inspectable. It’s forkable. It’s yours. <br>
+            <br>
+
+            This convergence — of first-language primitives, modular architecture, AI accessibility, and pure execution
+            speed — is
+            what makes Principle OS fundamentally different. It doesn’t offer a new way to design, or a new way to
+            develop. It
+            offers a new way to build, where structure leads to clarity, clarity leads to speed, and speed makes ideas
+            real. More
+            than anything, it’s an act of subtraction — a deliberate return to the fundamental principles that made the
+            web powerful
+            in the first place.</p>
+</div>
+        <div class="content-chapter-component">
+    <h3 class="ls-size">2. Design System <br> <span class="grey">As Source of Truth</span> </h3>
+    <p class="s-size">Every Principle OS project begins with a design system — not a template, but a complete
+            execution layer built from
+            tokens and rules. Visual identity is structured through atomic tokens: colors, typography, sizes, spacings,
+            icon sets,
+            and grids. These tokens are declared once in the stylesheets and automatically propagate to every page,
+            element, and
+            module that uses them. This makes future iterations — like rebranding or visual tuning — extremely efficient
+            and
+            low-risk. <br> <br>
+
+            The design system is structured across three distinct yet interconnected layers. Components are the smallest
+            units —
+            buttons, inputs, cards, labels. Each is a visual and functional building block. Layouts are assemblies of
+            components
+            tailored to specific structural zones (like hero sections, pricing blocks, or navigation bars). Templates
+            define the
+            overall structure of full pages, using layouts as zones into which content is injected. <br> <br>
+
+            The key innovation lies in how Principle OS parses the page. When a page is loaded, it is parsed block by
+            block, and
+            each tag corresponds to a predefined component, layout, or template. The engine recognizes it, links it to
+            the
+            corresponding visual and structural styles, and injects the correct content into the right structural zones.
+            This allows
+            for true modularity: a component built once can be used anywhere, with different content and contextual
+            behavior,
+            without breaking structure or logic. <br>
+
+            Once defined, all tokens and visual rules are compiled into dedicated CSS files
+            that become the backbone of the site’s skeleton. These stylesheets are not scoped per page or tied to
+            isolated
+            components — they are distributed globally across the project’s architecture. Each element placed on a page
+            — whether a
+            component, a layout, or a full template — automatically calls the right visual styles based on its identity
+            and
+            placement. This ensures that content is not only rendered correctly, but styled coherently and predictably
+            without
+            additional configuration. A single source of style governs all variations — making the entire system both
+            predictable
+            and extensible. <br> <br>
+            Everything is tied together in a loop of clarity: structure defines content zones, design tokens define
+            styling, and
+            content flows precisely where it's expected. This radically improves not only speed of assembly but
+            long-term
+            maintainability. Pages become scalable systems — not collections of hardcoded layouts. Developers no longer
+            need to
+            duplicate UI or recreate logic. Instead, the same component can live inside a layout, itself inside a
+            template — forming
+            scalable, reusable, and interpretable UI hierarchies.
+            This also reinforces accessibility and auditability: every design choice is visible, every rule
+            understandable, every
+            variation traceable to a single source of truth. The result is a system where updates are atomic, designs
+            are reliable,
+            and everything scales in all directions — without increasing complexity. <br> <br>
+
+            This structure enables radical
+            maintainability. Change a value in one place — and every instance updates. Rebranding becomes effortless.
+            Scaling
+            becomes predictable. Components are not isolated: they can nest inside layouts, which nest inside templates
+            — forming a
+            recursive architecture of blocks that mirrors how people actually design and build. No duplication. No
+            entropy. Just
+            structured reuse. Because UI behavior is driven by structure and styling — not invisible logic or
+            proprietary layers —
+            every decision is auditable, reversible, and long-term safe. The design system isn’t a decoration or a
+            helper layer. It
+            is the foundation. A programmable execution layer that makes brands durable, interfaces composable, and
+            complexity
+            manageable.</p>
+</div>
+        <div class="content-chapter-component">
+    <h3 class="ls-size">3. Modular Principle <br> <span class="grey">Assembly Without Abstraction</span> </h3>
+    <p class="s-size">This modular philosophy has already been introduced in the design system — through
+            components, layouts, and templates
+            that serve as structural primitives. But its execution becomes fully tangible in how Principle OS handles
+            page assembly.
+            When a page is rendered, it’s parsed block-by-block, with each tag directly mapped to a known structural
+            entity. If it
+            matches a registered component, layout, or template, the engine injects the right structure and applies the
+            correct
+            styles, ensuring design and content cohesion without requiring the developer to manually rewire anything.
+            This allows
+            every page to act as a clean composition of logic-free building blocks — assembled like LEGO, without the
+            need to
+            abstract or duplicate. <br> <br>
+
+            Pages are authored using plain HTML. Each tag corresponds to a visual unit — whether reused from the design
+            system or
+            created uniquely for that page. These blocks can be mixed, nested, reordered, and removed with complete
+            freedom. If a
+            specific block is only used once, it can be hardcoded as a one-off — just like in traditional HTML. But if
+            it’s reused,
+            it instantly inherits the logic, styling, and responsiveness defined in the system. This balance between
+            one-shot
+            customization and systemic reuse means nothing is wasted: no over-engineering, no tooling overhead, just
+            functional
+            markup that renders what it says. <br> <br>
+
+            Each page’s stylesheet is ultra-light. Rather than importing global libraries or rewriting CSS per view, the
+            style file
+            per page rarely exceeds 200 lines. That’s because most of the style logic is inherited from the design
+            system. These
+            page-level CSS files mainly govern spacing between sections and apply targeted overrides. This leads to
+            better load
+            times, clearer audit trails, and dramatically easier updates — especially when scaling to dozens or hundreds
+            of pages.
+
+            The key is that the system doesn’t require developers to “think like the engine.” There’s no JSX
+            transformation layer,
+            no component registry to maintain, no domain-specific syntax. The HTML is readable and functional. You can
+            open any
+            page, understand what’s happening, and modify it instantly — even without touching a terminal. This is
+            markup for
+            builders, not just coders. <br> <br>
+
+            The result is pages that are structurally expressive, yet visually coherent. Modular, but never fragmented.
+            When a
+            component is reused, it behaves identically — and when it’s customized, it stays readable. It’s the best of
+            both worlds:
+            handcrafted and scalable. And if a component is ever updated at the system level, that change automatically
+            cascades to
+            every instance — ensuring global consistency without global friction. <br> <br>
+
+            This architectural clarity makes Principle OS ideal for sites with long lifespans or evolving requirements.
+            Rebrands,
+            redesigns, or product pivots don’t require scrapping entire templates. You modify a few tokens, adjust a
+            layout, and
+            every page reflects the new direction. Modularity here doesn’t just mean “reusable code” — it means
+            structural
+            flexibility embedded into the markup itself. <br> <br>
+
+            Compared to traditional systems where headers and footers are repeated with slight variations, Principle OS
+            promotes a
+            more granular, legible assembly process. It treats the web as a living system of combinable, auditable,
+            interchangeable
+            blocks — not monoliths made of glued templates. And because every style is linked to structure, and every
+            structure to
+            content zones, there’s no ambiguity in how things work or evolve. <br> <br>
+
+            Ultimately, the modular HTML philosophy in Principle OS replaces the complexity of abstraction with the
+            elegance of
+            directness. There’s no “magic” layer trying to be smart. There’s just readable code, stable structure, and
+            fast
+            assembly. The engine empowers creators to iterate without hesitation and to build entire sites from memory —
+            because
+            what you write is what you ship, and what you ship is what you see.</p>
+</div>
+        <div class="content-chapter-component">
+    <h3 class="ls-size">4. Frames <br> <span class="grey">Shared Elements, One Source</span></h3>
+    <p class="s-size">In traditional web development, managing shared elements like headers, footers, or
+            navigation bars across multiple pages
+            often leads to duplication, brittle includes, or complex client-side logic. Principle OS introduces a
+            structural
+            solution to this recurring problem: frames — modular wrappers that define the persistent UI elements
+            surrounding dynamic
+            page content. <br> <br>
+
+            A frame is simply a shared structure — a block of HTML (like a header or footer) that wraps your content to
+            ensure
+            consistency across pages. But rather than being defined globally, frames are scoped to layout groups. <br>
+            <br>
+
+            A layout group is a directory-level structure that contains a family of pages — for example, a marketing
+            site, a
+            documentation hub, or a logged-in user dashboard. Each layout group has its own frame(s), defined within its
+            root
+            folder. This means you can have completely different headers, footers, sidebars, or persistent elements per
+            group — and
+            customize them freely depending on the context. There are no limitations: you can define multiple frames per
+            group, or
+            none at all. <br> <br>
+
+            When a page inside a layout group is rendered, the Principle OS engine automatically wraps its content with
+            the
+            corresponding frames for that group. These frames are not declared in the global base.html, but rather at
+            the root of
+            each layout group, giving you complete autonomy over the persistent structure for each section of your site.
+            <br> <br>
+
+            This architecture enables modularity without rigidity. You can: <br> <br>
+            • Customize shared elements (like the footer) per group. <br> <br>
+            • Include or exclude frames based on context. <br> <br>
+            • Redefine the structure of an entire section of the site, independently of others. <br> <br>
+
+            Moreover, Principle OS includes a dynamic transition system between pages of the same layout group, a
+            lightweight client-side routing mechanism (router.js). Shared frames — like headers, footers, or navigation
+            bars — are
+            preserved across
+            navigations, while only the inner content is dynamically replaced. This enables app-like transitions without
+            full page
+            reloads, improving both performance and user experience — with no framework, no hydration, and no
+            dependency. <br> <br>
+            And yes, for all the <span class="grey">SEO purists</span> out there — every page is statically generated,
+            with
+            its own URL, full
+            HTML file, and
+            proper semantic structure. The dynamic navigation is just a layer of comfort for the user — not a
+            replacement for real
+            files. The content is crawlable, indexable, and exists independently. You’re not sacrificing
+            discoverability
+            or
+            accessibility — you’re simply enhancing the browsing experience. <br> <br>
+
+            The result is a radically simplified and structured approach to persistent UI — one that avoids global
+            complexity while
+            offering local flexibility. Shared elements are no longer a bottleneck. They’re cleanly scoped, easily
+            maintained, and
+            fully under your control. <br> <br>
+
+            This isn’t a workaround. It’s a rethinking of one of the web’s core challenges — not just how we share
+            elements across
+            pages, but where and why we do it. With layout groups and frames, structure becomes intentional, modular,
+            and extensible
+            — a foundation for clarity, not complexity.
+            </p>
+</div>
+
+        <div class="content-chapter-component">
+    <h3 class="ls-size">5. Content <br> <span class="grey">The Way of JSON</span> </h3>
+    <p class="s-size">In Principle OS, content is not an afterthought — it’s a first-class citizen, treated
+            with the same structural respect
+            as components and templates. At the core of this philosophy is a simple yet powerful idea: content should be
+            decoupled
+            from design and stored in a structured, centralized, and human-readable format — JSON. <br> <br>
+
+            Every project begins with a /content/ directory at its root. This folder is divided into scopes such as
+            /pages/ and
+            /frames/, reflecting the architecture of the site. Inside each subfolder, you’ll find language-specific JSON
+            files — for
+            example, en.json, fr.json, es.json — which hold all the placeholders relevant to that page or frame. These
+            files serve
+            as the single source of truth for every textual element: titles, subtitles, CTAs, metadata, descriptions,
+            and beyond. <br> <br>
+
+            Placeholders act as content anchors. They are embedded directly in the plain HTML of your pages, frames, and
+            components.
+            When the site is built, the rendering engine scans the structure, finds each placeholder, matches it with
+            the right key
+            in the JSON file, and injects the correct content into its corresponding visual and semantic context. This
+            method makes
+            content highly modular, reusable, and maintainable — even across large-scale websites. <br> <br>
+
+            This approach creates a clean separation between conception and content production. Writers, editors,
+            translators, and
+            marketers can work autonomously within the JSON files, without ever touching the HTML. This removes the risk
+            of breaking
+            layout or code, eliminates back-and-forth with developers, and drastically reduces friction in content
+            iteration.
+            Whether for a campaign page or an entire product site, content is written once, cleanly structured, and
+            instantly
+            distributed where it belongs. <br> <br>
+
+            Principle OS also treats metadata as content — not configuration. Meta tags, OG data, SEO descriptions, and
+            title tags
+            are all defined within the JSON files, allowing per-page and per-language specificity. This gives creators
+            precise
+            control over how pages appear in search engines, social previews, and link sharing — while maintaining the
+            same
+            structured clarity used for visible content. <br> <br>
+
+            Critically, multilingual support is handled statically — not dynamically. Each language has its own fully
+            rendered
+            version of every page. This means better performance, cleaner URLs, faster indexing, and vastly improved
+            SEO. Localized
+            pages are not conditionally loaded or filtered on the client side — they exist independently, as full pages
+            in the
+            site’s architecture. Google doesn’t guess — it sees everything, in every language, exactly as intended. <br>
+            <br>
+
+            Where content does need to be translated, Principle OS integrates with AI to go beyond literal translation.
+            Unlike
+            traditional APIs that substitute words one by one, this system interprets context, tone, cultural nuance,
+            and semantic
+            intent. It generates localized versions of your content that aren’t just accurate — they’re meaningful,
+            persuasive, and
+            search-optimized for each specific market. This is how content moves from being merely multilingual to truly
+            multi-contextual. <br> <br>
+
+            Looking ahead, a visual content editor is in development to allow non-technical contributors to write,
+            preview, and
+            publish content without ever opening a JSON file. But even today, the structure is future-proof: flat,
+            readable, and
+            accessible by any system — from custom CMSs to AI models. <br> <br>
+
+            The result is content that’s fast to write, easy to scale, and impossible to misplace. No more Google Docs →
+            Notion →
+            CMS → Staging → QA → Production loops. One structure. One language. Total clarity.</p>
+</div>
+
+        <div class="content-chapter-component">
+    <h3 class="ls-size">6. Interactive Web <br> <span class="grey">With Simple Vanilla JS</span> </h3>
+    <p class="s-size">Web interaction is no longer about writing complex code — it’s about designing
+            experiences and describing them clearly.
+            With Principle OS, the only thing you need to focus on is what you want to happen. Once that’s defined, you
+            ask your AI
+            to build it. From the smallest animation to complex user flows — like checkout sequences, full custom
+            experience,
+            calendar booking, or custom SaaS logic — everything becomes prompt-first. The real skill is not in typing
+            JavaScript,
+            but in designing intent, testing, and iterating. If something doesn’t work, show the error to your AI. It
+            will fix it
+            for you. A 7-year-old could do it. <br> <br>
+
+            This completely redefines the relationship to interactivity. The JS layer is not a tangled web of
+            dependencies — it’s a
+            clean, readable directory. Every Principle OS project includes a root-level /js folder where each script
+            lives in its
+            own file. Each file does one thing. You call it only where needed — from a page, a modal, a frame, or even
+            from the
+            base.html. This modular separation makes debugging and control vastly simpler. Interactions are
+            context-specific — not a
+            bloated global library. The result: ultra-light pages, total behavioral control, zero waste. <br> <br>
+
+            Because JavaScript in Principle OS is written in vanilla form and separated from structure and styling (HTML
+            for layout,
+            SCSS for style), it becomes both transparent and transferable. Nothing is hidden behind frameworks or
+            toolchains.
+            There’s no Webpack. No Babel. No Vite. No bundler. You write. You save. You test. And it runs — directly in
+            the browser.
+            This “console-first” debugging model is instant, clear, and universal. Anyone can trace behavior, disable
+            functions, or
+            replace interactions without touching the rest of the site.<br> <br>
+
+            This simplicity also opens up unprecedented integration potential. Third-party tools like Stripe, Calendly,
+            Supabase,
+            Auth0, Shopify, or Firebase don’t require SDK bloat. They’re just APIs. You can ask your AI to connect them.
+            If you
+            don’t have the code, it will write it. If you don’t understand the logic, it will explain it. If you need to
+            adapt it,
+            it will update it. Principle OS is fully compatible with this new mode of building — where the AI is not
+            just a
+            co-pilot, but a full integration partner. The architecture is so simple — under 3000 lines of total system
+            code — that
+            your AI can learn it in minutes and operate safely inside it. <br> <br>
+            The Principle OS JavaScript environment is AI-native by
+            design. Every part of the system is documented, inspectable, and understandable by any major AI. You can
+            ask: “Add a
+            sticky header after 80px of scroll,” or “Switch JSON content between languages in a modal,” and it will
+            generate clean,
+            working code tailored to the existing structure. With under 400 lines of routing logic and under 3000 lines
+            of total
+            codebase, even advanced integrations can be plugged in, audited, and iterated without guesswork. <br> <br>
+
+            Each script exists as an independent, auditable piece of logic. Each can be improved, replaced, or removed
+            without
+            touching anything else. This is the opposite of the monolith. This is web interaction, decomposed and
+            democratized. What
+            used to require a full stack team can now be sketched, tested, and deployed by a single person — with
+            imagination, not
+            permission. <br> <br>
+
+            This is not just about simplicity — it’s about creative empowerment. A 7-year-old can describe a desired
+            behavior to an AI, test it, copy the console errors, and iterate until it works. What used to be a developer
+            bottleneck
+            becomes a game of curiosity and feedback. No more layers of abstraction, no more unnecessary frameworks.
+            Just clarity,
+            creativity, and full-stack control — without writing full-stack code. <br> <br>
+
+            Principle OS doesn’t reduce interaction to a set of predefined behaviors. It makes interaction a language
+            anyone can
+            speak. Simply, clearly, and powerfully.</p>
+</div>
+        <div class="content-chapter-component">
+    <h3 class="ls-size">7. Advanced Features <br> <span class="grey">Natively Available</span> </h3>
+    <p class="s-size">Principle OS is not just a minimal execution engine — it’s also a powerful platform,
+            offering native access to the most
+            important features modern websites and apps need. Without plugins. Without dependencies. Without complexity.
+            <br> <br>
+
+            At its core lies the routing engine, powered by layout groups. Each layout group defines a structural family
+            — like
+            documentation pages, product marketing, user dashboards, or e-commerce flows. Every group has its own
+            structure, its own
+            shared elements (frames), and its own routing context. This allows radically different sections of the same
+            site to
+            behave independently while remaining unified in structure and design. <br> <br>
+
+            Routing is flat and human-readable. A single layout-map.json file defines every path. There’s no dynamic
+            router to
+            debug, no build step, no hydration. Just a clear map of your site. Each route can have its own layout group,
+            its own
+            frames, and its own meta tags — with full support for multilingual versions, handled automatically at
+            generation. <br> <br>
+
+            404 and special pages (like maintenance, redirects, or legal disclaimers) are managed natively. They are
+            integrated into
+            the routing logic and automatically localized, following the same architecture as normal pages — which means
+            even errors
+            and edge states are branded, responsive, and globally consistent. <br> <br>
+
+            Modals are first-class citizens. They’re defined just like pages — same structure, same modularity — but are
+            rendered
+            only when needed. This avoids loading unnecessary DOM content during initial page load, preserving
+            performance and SEO
+            clarity. They’re perfect for user-triggered interfaces like cookie banners, login flows, or newsletter
+            opt-ins.
+            Lightweight, injectable, and fully translatable. <br> <br>
+
+            Every project includes a root-level /config directory. Here, you define essential global settings: your
+            domain, default
+            language, supported locales, SEO settings, analytics ID, and even AI-related options (like automatic
+            translation or
+            alt-text generation). This makes setup and deployment frictionless — and ensures all content is generated
+            with
+            consistency, structure, and precision. <br> <br>
+
+            SEO is built into the system. Every page — in every language — gets its own canonical URL, with native meta
+            tags, Open
+            Graph data, and alt attributes. Meta content is written once in the same content files (usually JSON), and
+            rendered
+            per-language, per-page. Even image tags with missing alt attributes get automatically populated based on the
+            file name —
+            a simple but powerful layer of accessibility and performance. <br> <br>
+
+            Dynamic features like language switching, context-specific UI, or script-based personalization are possible
+            without
+            introducing external complexity. Thanks to the design system’s tokens, CSS custom properties are injected at
+            the root —
+            enabling things like theme switching (dark/light), dynamic sizing, or animated feedback, all with zero JS
+            required. It’s
+            modern UX with zero runtime tax. <br> <br>
+
+            Principle OS also includes a relational path resolution system, powered by a special ../ keyword. This
+            ensures that
+            file paths (to assets, content, or includes) are always valid regardless of page depth — no more ../../../
+            nightmares.
+            The engine resolves the true root path dynamically during static generation, preserving clarity and
+            preventing broken
+            references in deep site structures. <br> <br>
+
+            Even advanced integrations are simplified. There’s no plugin system — because you don’t need one.
+            Third-party services
+            (Stripe, Supabase, Calendly, Firebase, Notion, etc.) are added via simple scripts — stored in the /js folder
+            and called
+            where needed. Each script is auditable, replaceable, and contextually scoped. <br> <br>
+
+            Finally, everything is customizable — but only if you need it to be. You don’t have to touch these files,
+            but if you
+            want to, they’re open, clear, and forkable. Advanced users can replace the rendering pipeline, modify the
+            design system,
+            or add server-side features — all without being trapped in a black box architecture. Principle OS is not
+            opinionated in
+            what you build — only in how clearly you build it.
+            </p>
+</div>
+        <div class="content-chapter-component">
+    <h3 class="ls-size">8. AI <br>
+            <spa class="grey">From Complexity to Clarity</spa></h3>
+    <p class="s-size">Principle OS isn’t just compatible with AI — it’s designed around it. This system
+                doesn’t require you to write code. It
+                requires you to design experiences. From simple interactions to deeply personalized customer journeys,
+                the only thing
+                you need to focus on is: what do you want to happen? Once that’s clear, you describe it to your AI.
+                That’s it. The AI
+                builds it — in vanilla JavaScript, clean HTML, and modular CSS — directly into the Principle OS
+                architecture. <br> <br>
+
+                This is not science fiction. It’s a new production reality. Need a sticky header after 80px scroll? A
+                multilingual
+                toggle that pulls the right placeholder content? A multi-step product configurator or a checkout flow
+                with custom logic?
+                Just ask. You don’t need to “code” — you need to describe, test, and iterate. If something breaks, copy
+                the console
+                error and paste it into your AI chat. It will debug, fix, and explain. You don’t need a dev team. You
+                need a clear
+                intention. <br> <br>
+
+                The real creative power is no longer in syntax — it’s in clarity of thought. A 7-year-old could build
+                world-class
+                interactions using Principle OS. Why? Because the system is designed for clarity, and AI handles the
+                rest. You say what
+                you want. The machine makes it happen. If it doesn’t work, you say what’s wrong. It gets fixed. Building
+                becomes a
+                conversation. <br> <br>
+
+                This transforms how we approach interactivity. Instead of drowning in frameworks, SDKs, and bloated
+                logic, you build
+                only what you need. Every JS script lives in its own file, inside a /js folder at the root of your
+                project. Want to run
+                it on a modal? A page? A frame? Call it where you need it. No bundler, no compilation. You write, save,
+                test. It works.
+                This console-first debugging model brings transparency and absolute control — down to the last function.
+                <br> <br>
+
+                More importantly, AI becomes a strategic UX collaborator. You can ask it to:<br> <br>
+                • Design a flow for a specific user behavior.<br> <br>
+                • Suggest variations based on cognitive load.<br> <br>
+                • Compare two experiences and explain which is more persuasive.<br> <br>
+                • Recommend conversion-enhancing tweaks based on real-time feedback.<br> <br>
+
+                Instead of templating user journeys, you design them on demand — based on how your users actually think,
+                feel, and act.
+                This is the end of pre-made patterns. It’s the beginning of truly custom experience design.<br> <br>
+
+                And when it comes to integration, Principle OS makes the rest of the web your playground. Stripe,
+                Calendly, Supabase,
+                Firebase, Notion, Shopify — every tool is usable natively. Just drop in an API key and a JS script. The
+                AI will:<br> <br>
+                • Write the logic,<br> <br>
+                • Handle the calls,<br> <br>
+                • Explain the flow,<br> <br>
+                • Optimize the response.<br> <br>
+
+                You are no longer trapped in platforms that regulate how you connect your tools. There are no
+                intermediaries between you
+                and your vision. You are the captain of the ship. The market decides. Use any tool you want, for any
+                purpose you choose.<br> <br>
+
+                This also means no lock-in, no black box, no proprietary CMS or theme that you have to fight. If a
+                service fails, you
+                switch. If your needs evolve, your stack evolves. AI helps you refactor, restructure, or even rewrite
+                whole workflows —
+                without vendor permission or agency intervention.<br> <br>
+
+                For teams, this is a paradigm shift. Anyone with a clear intent and a basic grasp of UX can now execute.
+                Product people,
+                marketers, designers — you no longer wait in line behind engineers. You describe your ideas. AI turns
+                them into
+                execution.<br> <br>
+
+                And as your ideas grow, the system scales with you. New layouts? More languages? Smarter content flows?
+                Principle OS is
+                already compatible. The architecture is transparent, simple, and just over 3000 lines of core logic —
+                lean enough for
+                your AI to read, understand, and contribute to safely.<br> <br>
+
+                Even more: AI doesn’t just execute. It documents. It explains. It generates alternatives. It comments
+                the code. It even
+                proposes improvements. It’s not just a co-pilot — it’s a fully autonomous systems engineer, available
+                24/7.<br> <br>
+
+                The result is an execution model with almost zero technical debt, zero dependency friction, and
+                unlimited creative
+                throughput. You no longer need a dev team to ship ideas. You need a mindset shift: from platform usage
+                to system
+                orchestration.<br> <br>
+
+                And Principle OS gives you the orchestration layer — open, inspectable, prompt-first, and
+                future-native.</p>
+</div>
+        <div class="content-chapter-component">
+    <h3 class="ls-size">9. Ownership <br> <span class="grey">MIT Code, Zero Lock-In</span></h3>
+    <p class="s-size">Principle OS is not a product. It’s a piece of territory — and it’s yours. No platform
+            watching. No backend whispering.
+            No cloud vendor waiting to charge. What you download is what you own. Every file, every function, every
+            behavior is
+            visible, forkable, and yours to command. No licenses to renew. No limits to bypass. No permission required.
+            You don’t
+            need a login. You don’t need a subscription. You don’t even need us. This is the opposite of SaaS. There is
+            no invisible
+            architecture. No updates that break your layout. No company with a roadmap that overrides yours. No dark
+            pattern hidden
+            behind a bright UI. Just a codebase under MIT license — written for clarity, designed for permanence. <br>
+            <br> Run it
+            locally.
+            Host it wherever. Fork it, sell it, delete it. You are the root user. And when you build with Principle OS,
+            you’re not
+            building on rented land. You’re building on solid ground — a system that doesn’t expire, doesn’t phone home,
+            and doesn’t
+            fall apart when trends shift. You are not a tenant of a platform. You are the owner of a stack. There is no
+            “vendor.”
+            There is no trap. Just a system that does what you tell it to do. The law of the market applies. You plug in
+            the tools
+            that serve you. You unplug the ones that don’t. No lock-in. No dependencies. Just leverage. This is not just
+            about
+            open-source. It’s about exit. Exit from toolchain sprawl. Exit from build dependencies. Exit from
+            product-driven
+            software. No gates. No walls. No rent. Just pure architectural freedom — and the power to walk away.</p>
+</div>
+
+        <div class="content-chapter-component">
+    <h3 class="ls-size">10. Time to Ship <br> <span class="grey">Under 4 Minutes</span></h3>
+    <p class="s-size">Principle OS is built for velocity — not just in concept, but in deployment. Every
+            project compiles into a single /dist
+            folder: flat, readable, and ready to serve. No runtime dependencies. No build traps. What you see in your
+            browser is
+            exactly what you ship — in real time, from the same folder. Want to go live? If your project is hosted on
+            GitHub, just
+            link it to Vercel, set the output directory to /dist, and enter npm run build as your command. That’s it.
+            You’re online.
+            No extra steps. No waiting. From idea to production in under 4 minutes. There are no bundlers. No Webpack.
+            No Babel. No
+            Vite. No node runtime required in production. You’re not compiling magic. You’re generating raw, native
+            HTML/CSS/JS —
+            built for the browser, built for the web. This isn’t just easy to publish. It’s built for the literal
+            experience of
+            shipping. Every project follows a clear, self-documented folder structure. You don’t need a README to
+            understand what’s
+            going on. Anyone — a designer, a dev, a founder, or even an AI assistant — can jump in, navigate the files,
+            and
+            contribute instantly. Testing is just as immediate. <br> <br>
+
+            You don’t need to spin up a local server. Just open the .html file in your browser. Want to test a modal, a
+            language
+            variant, or a checkout flow? It’s all statically generated — and fully visible before deployment. No preview
+            mode. No
+            backend. Just click and see. The system is compatible with every major static host: Vercel, Netlify, GitHub
+            Pages,
+            Cloudflare Pages, or even a plain FTP server. You can serve it from a CDN, or straight from your desktop.
+            Hosting is no
+            longer part of the problem space. Even advanced features like routing, modals, multi-language content, and
+            dynamic
+            content injection are already included in the build — no runtime logic, no server, no hydration. Everything
+            happens
+            once, during generation, and the result is pure static output that behaves like an app, but loads like a
+            page. The SEO
+            setup is automatic. Every page has native-language variants, semantic markup, meta tags, and OpenGraph data
+            — all
+            embedded directly in the static HTML. Search engines love it. You don’t need plugins. You don’t need to
+            “optimize”
+            anything. The output is already optimized by design. And because the system is under 3000 lines of code, the
+            build
+            process is near-instant. It doesn’t compile — it assembles. No magic. No surprises. No debug logs. You
+            write. You save.
+            You ship. That’s not a workflow. That’s freedom.
+            </p>
+</div>
+        <div class="content-chapter-component">
+    <h3 class="ls-size">11. Conclusion <br> <span class="grey">A Return to the Web We Deserve</span> </h3>
+    <p class="s-size">A first principle is a foundational truth that cannot be reduced any further — not a
+            trend, not a best practice, but a
+            raw fact of nature; when Elon Musk questioned why rockets were so expensive, he didn’t look at the supply
+            chain, he
+            asked what a rocket is at the atomic level — metal, wiring, fuel — and rebuilt from there, cutting the cost
+            of space
+            launch by over 90% not by iteration, but by returning to truth. <br> <br> Principle OS does the same with
+            the web. It doesn’t
+            stack another abstraction — it returns to the irreducible elements: HTML, CSS, and JS. The web was designed
+            to be open,
+            interoperable, and simple. That’s not nostalgia — it’s power. Real innovation doesn’t come from layering
+            complexity, but
+            from stripping it away until only the essence remains — then rebuilding with intent. Principle OS is not a
+            framework —
+            it’s a philosophy of radical clarity, made executable. It doesn’t promise magic. It returns control. You’re
+            not a user
+            of a platform — you’re the architect of your own system. This is not naive simplification, but structured
+            empowerment:
+            speed without sacrifice, sovereignty without friction. <br> <br> Today, everything runs on the web — brands,
+            knowledge,
+            businesses, beliefs. Those who master web structure master the flow of value. Principle OS is a tool of
+            strategic
+            leverage: a system that is legible, teachable, forkable, and permanent. It is built on a philosophy of
+            non-enclosure —
+            no dependency on a vendor, no backend you don’t understand, no component you can’t read. If you can read
+            HTML, you can
+            evolve. And if you ever outgrow it, you can leave without breaking anything. Principle OS is not a trap.
+            It’s the
+            anti-cage. And as we look forward, the web enters a new phase: where structural simplicity and AI-native
+            collaboration
+            rewrite the entire front-end game. <br> <br> The rise of low-code promised to empower creators — but failed
+            not from lack of
+            ambition, but from too much abstraction. What Principle OS offers is different: a way back to direct
+            authorship, where
+            building is not reserved for the initiated, and where clarity becomes leverage.Grounded in first principles.
+            <br> <br>Designed
+            to reduce the noise. <br>
+            Engineered for momentum. <br> <br>
+
+            From thought to product.<br>
+            From product to brand. <br>
+            From brand to scale. <br> <br>
+
+            And here, your instruments of power. <br>
+            No learning curve. No setup hell. <br>
+            You’re only dependant of what you’re capable of. <br> <br>
+
+            Build fast, custom, clean digital experiences. <br>
+            Full control. Without pain. Without tech dept. <br> <br>
+
+            Because what you imagine should
+            ship — now, not in 6 weeks. <br> <br>
+
+            PrincipleOS doens’t reinvent the web promise. <br>
+            It finally keeps it.</p>
+</div>
+    </div>
+
+</main></div>
+<link rel="stylesheet" href="../css/frames/footer.css">
+<footer>
+    <p class="s-size grey text-center">
+        MIT Licensed. <br>
+        Built to be forked, extended, and owned.
+    </p>
+    <img class="logo-footer" src="../../assets/media/logo-principle-os.svg" alt="Logo Principle Os">
+    <div class="list-footer-items grey text-center s-size">
+        <p>© 2025 Principle OS™</p>
+        <a href="https://principleos.com/whitepaper/">Whitepaper</a>
+        <a href="https://principleos.com/get-started/">Documentation</a>
+        <a href="">Github</a>
+        <p>Built with Principle OS™</p>
+        <a href="https://louislebras.com/">Made by Louis Le Bras</a>
+    </div>
+</footer>
+    <div id="modals-root"></div>
+    <script>window.__DEFAULT_LANG__ = "en";</script>
+    <script src="../js/modal-config.js" defer=""></script>
+    <script src="../js/modal-manager.js" defer=""></script>
+    <script src="../js/404.js" type="module"></script>
+
+</body></html>

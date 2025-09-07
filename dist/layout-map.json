@@ -7,7 +7,9 @@
       "footer"
     ],
     "pages": [
-      "/index"
+      "/whitepaper",
+      "/index",
+      "/404"
     ]
   },
   {
