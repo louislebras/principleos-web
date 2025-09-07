@@ -624,17 +624,17 @@ function generateRoot404Redirect() {
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="refresh" content="0; url=/404/" />
-    <title>Redirecting…</title>
+    <title>404</title>
+    <script>
+      window.location.replace("/404/");
+    </script>
   </head>
-  <body>
-    <p>Redirecting to <a href="/404/">/404/</a></p>
-  </body>
+  <body></body>
 </html>`;
   const outputPath = path.join(DIST_PATH, "404.html");
   fs.writeFileSync(outputPath, html, "utf8");
   console.log(
-    "✅ Fichier 404.html généré à la racine (redirection vers /404/)"
+    "✅ Fichier 404.html avec redirection JS instantanée généré à la racine."
   );
 }
 
