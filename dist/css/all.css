@@ -541,7 +541,7 @@ body {
 
 @media (max-width: 850px) {
   .no-mobile {
-    display: none;
+    display: none !important;
   }
   .only-mobile {
     display: block;
