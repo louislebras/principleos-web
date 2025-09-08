@@ -267,6 +267,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         setTimeout(() => {
           removeAllPrevious();
           contentContainer.innerHTML = routerCache[normTargetPath];
+          window.scrollTo(0, 0); // <=== AJOUT ICI
           updateMetaAndTitle(document);
           updateNavButtons(normTargetPath);
           setTimeout(() => {
@@ -298,6 +299,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       setTimeout(() => {
         removeAllPrevious();
         contentContainer.innerHTML = newContent.innerHTML;
+        window.scrollTo(0, 0); // <=== AJOUT ICI
         if (typeof init === "function") {
           try {
             init();
