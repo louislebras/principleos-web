@@ -12,16 +12,16 @@
 </header>
 
 <div class="container-nav-header s-size">
-    <a href="[ROOT]/documentation/">
+    <a class="elementnav" href="[ROOT]/documentation/">
         Documentation
     </a>
-    <a href="[ROOT]/whitepaper/">
+    <a class="elementnav" href="[ROOT]/whitepaper/">
         Whitepaper
     </a>
-    <a class="open-modal-waitlist-form" href="[ROOT]/whitepaper/">
+    <a class="open-modal-waitlist-form elementnav" href="[ROOT]/whitepaper/">
         Join Waitlist
     </a>
-    <a href="mailto:louis@principleos.com">
+    <a class="elementnav" href="mailto:louis@principleos.com">
         Contact
     </a>
 </div>
@@ -33,6 +33,7 @@
         const btn = document.querySelector(".btn-menu");
         const container = document.querySelector(".container-nav-header");
         const blur = document.querySelector(".fixed-back-blur-header");
+        const elementsNav = document.querySelector(".elementnav");
 
         const fadeDuration = 400;
 
@@ -69,5 +70,6 @@
 
         btn.addEventListener("click", toggleMenu);
         blur.addEventListener("click", closeMenu);
+        elementsNav.addEventListener("click", closeMenu);
     });
 </script>

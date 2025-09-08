@@ -40,16 +40,16 @@
 </header>
 
 <div class="container-nav-header s-size">
-    <a href="../documentation/">
+    <a class="elementnav" href="../documentation/">
         Documentation
     </a>
-    <a href="../whitepaper/">
+    <a class="elementnav" href="../whitepaper/">
         Whitepaper
     </a>
-    <a class="open-modal-waitlist-form" href="../whitepaper/">
+    <a class="open-modal-waitlist-form elementnav" href="../whitepaper/">
         Join Waitlist
     </a>
-    <a href="mailto:louis@principleos.com">
+    <a class="elementnav" href="mailto:louis@principleos.com">
         Contact
     </a>
 </div>
@@ -61,6 +61,7 @@
         const btn = document.querySelector(".btn-menu");
         const container = document.querySelector(".container-nav-header");
         const blur = document.querySelector(".fixed-back-blur-header");
+        const elementsNav = document.querySelector(".elementnav");
 
         const fadeDuration = 400;
 
@@ -97,6 +98,7 @@
 
         btn.addEventListener("click", toggleMenu);
         blur.addEventListener("click", closeMenu);
+        elementsNav.addEventListener("click", closeMenu);
     });
 </script>
 <div id="pageContent"><!-- <link rel="stylesheet" href="../css/pages/home.css"> --><link rel="stylesheet" href="../css/pages/whitepaper.css">
