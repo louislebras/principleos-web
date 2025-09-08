@@ -10,7 +10,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  animation: appearLoader 3s ease;
+  animation: appearLoader 2.5s ease;
   opacity: 0;
   display: flex;
 
@@ -29,14 +29,14 @@
     img {
       z-index: 200 !important;
 
-      animation: fadeUp 3s ease;
+      animation: fadeUp 2.5s ease;
       transition: 0.3s;
       position: relative;
       opacity: 1;
       height: 40px;
     }
 
-    @media (max-width: 800px) {
+    @media (max-width: 850px) {
       img {
         height: 40px;
       }
@@ -48,11 +48,11 @@
       opacity: 1;
     }
 
-    29% {
+    39% {
       opacity: 1;
     }
 
-    50% {
+    70% {
       opacity: 0;
     }
 
@@ -86,17 +86,5 @@
 
   100% {
     display: none;
-  }
-}
-
-@media (max-width: 950px) {
-  .loader {
-    .container-img-loader {
-      top: 40vh;
-      // left: 49%;
-      img {
-        height: 70px;
-      }
-    }
   }
 }
