@@ -9,7 +9,45 @@
     <script type="module" src="../js/language-switcher.js" defer=""></script>
     <script type="module" src="../js/router.js" defer=""></script>
     <script type="module" src="../js/localhostlinks.js" defer=""></script>
-    </head><body class="s-size">
+    <title>Thank you! - Principle OS™</title>
+<meta name="description" content="Thank you for joining the waitlist. You’ve taken the first step toward building on your own terms — without platforms, without dependencies, without permission.">
+
+<!-- OpenGraph -->
+<meta property="og:title" content="Thank you! - Principle OS™">
+<meta property="og:description" content="Thank you for joining the waitlist. You’ve taken the first step toward building on your own terms — without platforms, without dependencies, without permission.">
+<meta property="og:image" content="https://principleos.com/assets/cover.png">
+<meta name="author" content="Louis Le Bras">
+<meta name="copyright" content="Copyright Louis Le Bras ©">
+<meta property="og:url" content="https://principleos.com/thanks">
+
+<meta property="og:type" content="website">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@louislebras">
+<meta name="twitter:title" content="Thank you! - Principle OS™">
+<meta name="twitter:description" content="Thank you for joining the waitlist. You’ve taken the first step toward building on your own terms — without platforms, without dependencies, without permission.">
+<meta name="twitter:image" content="https://principleos.com/assets/cover.png">
+<meta name="twitter:url" content="https://principleos.com/thanks">
+
+<!-- Schema.org -->
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Thank you! - Principle OS™",
+        "description": "Thank you for joining the waitlist. You’ve taken the first step toward building on your own terms — without platforms, without dependencies, without permission.",
+        "publisher": {
+            "@type": "Organization",
+            "name": "Principle OS™",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "{{https://principleos.com/assets/favicon.png/}}"
+            }
+        },
+        "url": "https://principleos.com/thanks"
+    }
+</script></head><body class="s-size">
     <link rel="stylesheet" href="../css/pages/index.css">
 
 
@@ -107,9 +145,73 @@
         });
     });
 </script>
-<div id="pageContent"><link rel="stylesheet" href="../css/pages/404.css">
+<div id="pageContent"><!-- <link rel="stylesheet" href="../css/pages/home.css"> --><link rel="stylesheet" href="../css/pages/whitepaper.css">
+<link rel="stylesheet" href="../css/pages/thanks.css">
+<div class="fixed-blur-info no-mobile">
+    <p class="xs-size grey text-center">
+        The engine runs. We’re now documenting how it works <span class="no-mobile">(built with
+            PrincipleOS™)</span>
+    </p>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            if (window.innerWidth >= 850) return;
+
+            const target = document.querySelector(".fixed-blur-info");
+            if (!target) return;
+
+            let hidden = false;
+
+
+            target.style.transition = "opacity 0.5s ease";
+
+            window.addEventListener("scroll", () => {
+                if (hidden) return;
+
+                const scrollY = window.scrollY || window.pageYOffset;
+                const triggerPoint = window.innerHeight * 0.15;
+
+                if (scrollY > triggerPoint) {
+                    hidden = true;
+
+
+                    target.style.opacity = "0";
+
+
+                    setTimeout(() => {
+                        target.style.display = "none";
+                    }, 1000);
+                }
+            });
+        });
+    </script>
+</div>
 <main>
-    <h1 class="ls-size">404</h1>
+
+    <div class="content-chapter-component text-center">
+    <h3 class="ls-size">Access Confirmed. <br> You’re on the List.</h3>
+    <p class="s-size">Thank you for joining the waitlist.
+        You’ve taken the first step toward building on your own terms — without platforms, without dependencies, without
+        permission. <br> <br>
+
+        When the time comes, you’ll be the first to know. Until then, keep your ideas sharp. The tools are coming.</p>
+</div>
+
+    <div class="container-buttons-whitepaper btns-bottom-whitepaper">
+
+        <div class="main-button-black-component">
+    <a class="s-size" href="../">
+        Back to Home
+    </a>
+</div>
+        <div class="main-button-grey-alt-component">
+    <a class="s-size" href="../whitepaper">
+        <span>Get Whitepaper</span>
+
+        <span>→</span>
+    </a>
+</div>
+    </div>
+
 </main></div>
 <link rel="stylesheet" href="../css/frames/footer.css">
 <footer>

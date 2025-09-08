@@ -1,0 +1,65 @@
+<!-- <link rel="stylesheet" href="[ROOT]/css/pages/home.css"> -->
+<link rel="stylesheet" href="[ROOT]/css/pages/whitepaper.css">
+<link rel="stylesheet" href="[ROOT]/css/pages/thanks.css">
+<div class="fixed-blur-info no-mobile">
+    <p class="xs-size grey text-center">
+        The engine runs. We’re now documenting how it works <span class="no-mobile">(built with
+            PrincipleOS™)</span>
+    </p>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            if (window.innerWidth >= 850) return;
+
+            const target = document.querySelector(".fixed-blur-info");
+            if (!target) return;
+
+            let hidden = false;
+
+
+            target.style.transition = "opacity 0.5s ease";
+
+            window.addEventListener("scroll", () => {
+                if (hidden) return;
+
+                const scrollY = window.scrollY || window.pageYOffset;
+                const triggerPoint = window.innerHeight * 0.15;
+
+                if (scrollY > triggerPoint) {
+                    hidden = true;
+
+
+                    target.style.opacity = "0";
+
+
+                    setTimeout(() => {
+                        target.style.display = "none";
+                    }, 1000);
+                }
+            });
+        });
+    </script>
+</div>
+<main>
+
+    <div class="content-chapter-component text-center">
+        [title-chapter]: "Access Confirmed. <br> You’re on the List.";
+        [content-chapter]: "Thank you for joining the waitlist.
+        You’ve taken the first step toward building on your own terms — without platforms, without dependencies, without
+        permission. <br> <br>
+
+        When the time comes, you’ll be the first to know. Until then, keep your ideas sharp. The tools are coming.";
+    </div>
+
+    <div class="container-buttons-whitepaper btns-bottom-whitepaper">
+
+        <div class="main-button-black-component">
+            [url-button]: "[ROOT]/";
+            [text-button]: "Back to Home";
+        </div>
+        <div class="main-button-grey-alt-component">
+            [url-button]: "[ROOT]/whitepaper";
+            [text-button]: "Get Whitepaper";
+        </div>
+    </div>
+
+</main>
