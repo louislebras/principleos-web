@@ -886,7 +886,6 @@ async function buildSite() {
   // ⛔️ on ne copie plus les modals brutes : elles sont générées localisées
   // copyFolder(path.resolve("modals"), path.join(DIST_PATH, "modals"));
   copyFolder(path.resolve("config"), path.join(DIST_PATH, "config"));
-  copyFolder(path.resolve("api"), path.join(DIST_PATH, "api"));
 
   collectDesignSystemClassNames();
   generateRoot404RedirectPerLanguage();
