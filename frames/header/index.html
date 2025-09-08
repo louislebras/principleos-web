@@ -12,35 +12,31 @@
 </header>
 
 <div class="container-nav-header s-size">
-    <a class="elementnav" href="[ROOT]/documentation/">
+    <a href="[ROOT]/documentation/">
         Documentation
     </a>
-    <a class="elementnav" href="[ROOT]/whitepaper/">
+    <a href="[ROOT]/whitepaper/">
         Whitepaper
     </a>
-    <a class="open-modal-waitlist-form elementnav" href="[ROOT]/whitepaper/">
+    <a class="open-modal-waitlist-form" href="[ROOT]/whitepaper/">
         Join Waitlist
     </a>
-    <a class="elementnav" href="mailto:louis@principleos.com">
+    <a href="mailto:louis@principleos.com">
         Contact
     </a>
 </div>
-
-
 
 <script>
     document.addEventListener("DOMContentLoaded", () => {
         const btn = document.querySelector(".btn-menu");
         const container = document.querySelector(".container-nav-header");
         const blur = document.querySelector(".fixed-back-blur-header");
-        const elementsNav = document.querySelector(".elementnav");
 
         const fadeDuration = 400;
 
         function openMenu() {
             container.classList.add("visible");
             blur.classList.add("visible");
-
 
             setTimeout(() => {
                 container.classList.add("show");
@@ -51,7 +47,6 @@
         function closeMenu() {
             container.classList.remove("show");
             blur.classList.remove("show");
-
 
             setTimeout(() => {
                 container.classList.remove("visible");
@@ -70,6 +65,13 @@
 
         btn.addEventListener("click", toggleMenu);
         blur.addEventListener("click", closeMenu);
-        elementsNav.addEventListener("click", closeMenu);
+
+        // 🆕 Fermer menu au clic sur un lien interne
+        container.addEventListener("click", (e) => {
+            const link = e.target.closest("a");
+            if (link) {
+                closeMenu();
+            }
+        });
     });
 </script>

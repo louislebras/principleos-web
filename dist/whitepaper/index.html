@@ -40,35 +40,31 @@
 </header>
 
 <div class="container-nav-header s-size">
-    <a class="elementnav" href="../documentation/">
+    <a href="../documentation/">
         Documentation
     </a>
-    <a class="elementnav" href="../whitepaper/">
+    <a href="../whitepaper/">
         Whitepaper
     </a>
-    <a class="open-modal-waitlist-form elementnav" href="../whitepaper/">
+    <a class="open-modal-waitlist-form" href="../whitepaper/">
         Join Waitlist
     </a>
-    <a class="elementnav" href="mailto:louis@principleos.com">
+    <a href="mailto:louis@principleos.com">
         Contact
     </a>
 </div>
-
-
 
 <script>
     document.addEventListener("DOMContentLoaded", () => {
         const btn = document.querySelector(".btn-menu");
         const container = document.querySelector(".container-nav-header");
         const blur = document.querySelector(".fixed-back-blur-header");
-        const elementsNav = document.querySelector(".elementnav");
 
         const fadeDuration = 400;
 
         function openMenu() {
             container.classList.add("visible");
             blur.classList.add("visible");
-
 
             setTimeout(() => {
                 container.classList.add("show");
@@ -79,7 +75,6 @@
         function closeMenu() {
             container.classList.remove("show");
             blur.classList.remove("show");
-
 
             setTimeout(() => {
                 container.classList.remove("visible");
@@ -98,11 +93,18 @@
 
         btn.addEventListener("click", toggleMenu);
         blur.addEventListener("click", closeMenu);
-        elementsNav.addEventListener("click", closeMenu);
+
+        / 🆕 Fermer menu au clic sur un lien interne
+        container.addEventListener("click", (e) => {
+            const link = e.target.closest("a");
+            if (link) {
+                closeMenu();
+            }
+        });
     });
 </script>
 <div id="pageContent"><!-- <link rel="stylesheet" href="../css/pages/home.css"> --><link rel="stylesheet" href="../css/pages/whitepaper.css">
-<div class="fixed-blur-info">
+<div class="fixed-blur-info no-mobile">
     <p class="xs-size grey text-center">
         The engine runs. We’re now documenting how it works <span class="no-mobile">(built with
             PrincipleOS™)</span>
