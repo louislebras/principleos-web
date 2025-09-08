@@ -4,11 +4,51 @@
         <div class="waitlist-wrapper-form">
             <p class="lss-size">Join Waitlist</p>
 
-            <form action="https://formbold.com/s/oP5GV" method="POST">
+            <!-- <form action="https://formbold.com/s/oP5GV" method="POST">
                 <input class="name-waitlist" type="text" placeholder="Name" name="name" required>
                 <input class="email-waitlist" type="email" placeholder="E-mail" name="email" required>
                 <button type="submit">Join</button>
+            </form> -->
+
+            <form id="waitlistForm">
+                <input class="name-waitlist" name="name" placeholder="Name" required />
+                <input class="email-waitlist" name="email" type="email" placeholder="Email" required />
+                <button type="submit">Joint</button>
             </form>
+            <p class="only-mobile no-mobile" id="responseMessage"></p>
+
+            <script>
+                const form = document.getElementById("waitlistForm");
+                const message = document.getElementById("responseMessage");
+
+                form.addEventListener("submit", async (e) => {
+                    e.preventDefault();
+
+                    const data = {
+                        name: form.elements["name"].value,
+                        email: form.elements["email"].value,
+                    };
+
+                    try {
+                        const res = await fetch("/api/waitlist", {
+                            method: "POST",
+                            headers: {
+                                "Content-Type": "application/json"
+                            },
+                            body: JSON.stringify(data)
+                        });
+
+                        if (res.ok) {
+                            message.textContent = "🎉 Merci, vous êtes bien inscrit.";
+                            form.reset();
+                        } else {
+                            message.textContent = "❌ Une erreur est survenue.";
+                        }
+                    } catch (err) {
+                        message.textContent = "⚠️ Erreur réseau.";
+                    }
+                });
+            </script>
             <p class="close-modal s-size link-hover grey btn-back-waitlist">← Back</p>
 
         </div>
