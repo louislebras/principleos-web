@@ -94,7 +94,6 @@
         btn.addEventListener("click", toggleMenu);
         blur.addEventListener("click", closeMenu);
 
-        / 🆕 Fermer menu au clic sur un lien interne
         container.addEventListener("click", (e) => {
             const link = e.target.closest("a");
             if (link) {
