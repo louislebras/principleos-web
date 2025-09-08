@@ -45,6 +45,13 @@ header {
   background-color: #f4f4f4;
 }
 
+@media (max-width: 850px) {
+  .container-nav-header {
+    width: 60vw;
+    top: 100px;
+    min-width: 220px;
+  }
+}
 .fixed-back-blur-header {
   position: fixed;
   top: 0px;
