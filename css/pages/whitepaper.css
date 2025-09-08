@@ -64,6 +64,11 @@
 .heading-whitepaper .image-wrapper-transparent-component {
   margin-top: 20vh;
 }
+@media (max-width: 850px) {
+  .heading-whitepaper .image-wrapper-transparent-component {
+    margin-top: 15vh;
+  }
+}
 
 .container-buttons-whitepaper {
   display: flex;
