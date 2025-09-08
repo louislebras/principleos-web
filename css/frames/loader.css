@@ -39,6 +39,8 @@
   }
   .loader .container-img-loader img {
     height: 40px;
+    position: relative;
+    left: 5px;
   }
 }
 @keyframes fadeUp {

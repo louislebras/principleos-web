@@ -28,7 +28,6 @@
 
     img {
       z-index: 200 !important;
-
       animation: fadeUp 2.5s ease;
       transition: 0.3s;
       position: relative;
@@ -40,6 +39,8 @@
       top: 43%;
       img {
         height: 40px;
+        position: relative;
+        left: 5px;
       }
     }
   }
