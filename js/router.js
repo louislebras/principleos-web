@@ -256,6 +256,9 @@ document.addEventListener("DOMContentLoaded", async () => {
       return;
     }
 
+    // ➕ Empêche le layout shift
+    const currentHeight = contentContainer.offsetHeight;
+    contentContainer.style.minHeight = `${currentHeight}px`;
     contentContainer.style.transition = "opacity 300ms ease";
     contentContainer.style.opacity = "0";
 
@@ -319,6 +322,8 @@ document.addEventListener("DOMContentLoaded", async () => {
         setTimeout(() => {
           executeScripts();
           contentContainer.style.opacity = "1";
+          // ✅ Réinitialise après transition
+          contentContainer.style.minHeight = "";
         }, 200);
       }, 300);
 
