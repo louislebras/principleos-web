@@ -34,6 +34,9 @@
   height: 40px;
 }
 @media (max-width: 850px) {
+  .loader .container-img-loader {
+    top: 43%;
+  }
   .loader .container-img-loader img {
     height: 40px;
   }
