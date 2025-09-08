@@ -1,3 +1,3 @@
 export default function layout() {
-  return ["header", "pageContent", "footer"];
+  return ["loader", "header", "pageContent", "footer"];
 }

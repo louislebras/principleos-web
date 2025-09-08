@@ -1,20 +1,76 @@
+.fixed-blur-info {
+  display: flex;
+  padding: 0px 12px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  border-radius: 60px;
+  border: 1px solid rgba(218, 218, 218, 0.4470588235);
+  background: rgba(232, 232, 232, 0.37);
+  backdrop-filter: blur(12px);
+  height: 25px;
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  z-index: 100;
+  width: fit-content;
+}
+.fixed-blur-info p {
+  line-height: 100% !important;
+  position: relative;
+  top: 0px;
+  display: block;
+}
+
+@media (max-width: 850px) {
+  .fixed-blur-info {
+    height: 35px;
+    width: 320px;
+  }
+}
 .heading-whitepaper {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 0vh;
+  width: 100%;
 }
-.heading-whitepaper h2 {
+.heading-whitepaper a {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.heading-whitepaper h1 {
   width: 65%;
   max-width: 900px;
   margin-top: 20px;
 }
-.heading-whitepaper .container-buttons-whitepaper {
+@media (max-width: 850px) {
+  .heading-whitepaper h1 {
+    width: 95%;
+  }
+}
+.heading-whitepaper .description-subtitle-component {
+  margin-top: 20px;
+  text-align: center;
+}
+.heading-whitepaper .description-text-component {
+  margin-top: 20px;
+  text-align: center;
+}
+.heading-whitepaper .image-wrapper-transparent-component {
+  margin-top: 15vh;
+}
+
+.container-buttons-whitepaper {
   display: flex;
   gap: 15px;
   margin-top: 20px;
 }
-.heading-whitepaper .container-buttons-whitepaper .open-waitlist-btn {
+.container-buttons-whitepaper .open-waitlist-btn {
   display: flex;
   gap: 50px;
   padding: 11px 16px;
@@ -28,12 +84,16 @@
   outline: none;
   cursor: pointer;
 }
-.heading-whitepaper .container-buttons-whitepaper .open-waitlist-btn:hover {
+.container-buttons-whitepaper .open-waitlist-btn:hover {
   border: 1px solid #ececec;
 }
-.heading-whitepaper .description-subtitle-component {
-  margin-top: 20px;
+
+.content-whitepaper-principle {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
-.heading-whitepaper .description-text-component {
-  margin-top: 20px;
+
+.btns-bottom-whitepaper {
+  margin-top: 10vh;
 }

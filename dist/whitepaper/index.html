@@ -15,19 +15,91 @@
 
 
 
-    <link rel="stylesheet" href="../css/frames/header.css">
+    <link rel="stylesheet" href="../css/frames/loader.css">
 
+
+<div class="loader">
+
+    <div class="container-img-loader">
+        <img src="../assets/media/logo-principle-os.svg" alt="Logo Principle Os">
+
+
+    </div>
+</div>
+<link rel="stylesheet" href="../css/frames/header.css">
+<div class="fixed-back-blur-header"></div>
 <header class="header">
     <p class="principle-wordmark">Principle™</p>
     <div class="container-menu">
         <img class="logo-principle-os-menu" src="../assets/media/logo-principle-os.svg" alt="Logo Principle Os">
         <div class="btn-menu">
-            <img src="../../assets/icons/icon-menu-grey.svg" alt="Icon Menu Grey">
+            <img src="../assets/icons/icon-menu-grey.svg" alt="Icon Menu Grey">
         </div>
     </div>
+
 </header>
-<div id="pageContent"><link rel="stylesheet" href="../css/pages/home.css">
-<link rel="stylesheet" href="../css/pages/whitepaper.css">
+
+<div class="container-nav-header s-size">
+    <a href="../documentation/">
+        Documentation
+    </a>
+    <a href="../whitepaper/">
+        Whitepaper
+    </a>
+    <a class="open-modal-waitlist-form" href="../whitepaper/">
+        Join Waitlist
+    </a>
+    <a href="mailto:louis@principleos.com">
+        Contact
+    </a>
+</div>
+
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const btn = document.querySelector(".btn-menu");
+        const container = document.querySelector(".container-nav-header");
+        const blur = document.querySelector(".fixed-back-blur-header");
+
+        const fadeDuration = 400;
+
+        function openMenu() {
+            container.classList.add("visible");
+            blur.classList.add("visible");
+
+
+            setTimeout(() => {
+                container.classList.add("show");
+                blur.classList.add("show");
+            }, 10);
+        }
+
+        function closeMenu() {
+            container.classList.remove("show");
+            blur.classList.remove("show");
+
+
+            setTimeout(() => {
+                container.classList.remove("visible");
+                blur.classList.remove("visible");
+            }, fadeDuration);
+        }
+
+        function toggleMenu() {
+            const isVisible = container.classList.contains("show");
+            if (isVisible) {
+                closeMenu();
+            } else {
+                openMenu();
+            }
+        }
+
+        btn.addEventListener("click", toggleMenu);
+        blur.addEventListener("click", closeMenu);
+    });
+</script>
+<div id="pageContent"><!-- <link rel="stylesheet" href="../css/pages/home.css"> --><link rel="stylesheet" href="../css/pages/whitepaper.css">
 <div class="fixed-blur-info">
     <p class="xs-size grey text-center">
         The engine runs. We’re now documenting how it works <span class="no-mobile">(built with
@@ -68,13 +140,17 @@
 </div>
 <main>
     <div class="heading-whitepaper">
-        <h1 class="ultra-size">Principle <span>OS</span></h1>
-        <h2 class="ls-size text-center">An Operating System to Build Everything on the Web without
-            Permission in Days.
-        </h2>
+        <div class="image-wrapper-transparent-component">
+    <img src="../assets/media/junction-of-first-principles-principleos.png" alt="Junction Of First Principles Principleos">
+</div>
+        <!-- <h1 class="ultra-size">Principle <span>OS</span></h1> -->
+        <h1 class="ls-size text-center"> <span class="grey">Whitepaper</span> <br> Principle: A First-Principles Web
+            <br> Operating System
+        </h1>
 
         <p class="description-subtitle-component">
-    A return to first principles: Freedom to design, ship, and scale.
+    Build Everything on the Web: <br class="only-mobile">Freedom to design, ship, and
+            scale.
 </p>
 
         <a target="_blank" href="https://louislebras.com/">
@@ -95,9 +171,7 @@
                 <p><span>→</span></p>
             </div>
         </div>
-        <div class="image-wrapper-transparent-component">
-    <img src="../assets/media/junction-of-first-principles-principleos.png" alt="Junction Of First Principles Principleos">
-</div>
+
 
     </div>
 
@@ -1062,6 +1136,19 @@
             PrincipleOS doens’t reinvent the web promise. <br>
             It finally keeps it.</p>
 </div>
+    </div>
+
+    <div class="container-buttons-whitepaper btns-bottom-whitepaper">
+
+        <div class="main-button-black-target-blank-component">
+    <a target="_blank" class="s-size" href="../assets/documents/principleos.pdf">
+        Download Whitepaper
+    </a>
+</div>
+        <div class="open-modal-waitlist-form open-waitlist-btn s-size">
+            <p>Join Waitlist</p>
+            <p><span>→</span></p>
+        </div>
     </div>
 
 </main></div>

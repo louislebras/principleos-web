@@ -2,6 +2,7 @@
   {
     "group": "default",
     "components": [
+      "loader",
       "header",
       "pageContent",
       "footer"
@@ -15,6 +16,7 @@
   {
     "group": "documentation",
     "components": [
+      "loader",
       "header",
       "pageContent",
       "footer"

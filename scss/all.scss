@@ -428,6 +428,12 @@ $text-secondary: $color-neutral-700;
   }
 }
 
+@media (max-width: 850px) {
+  .content-chapter-component {
+    width: 90%;
+  }
+}
+
 .main-button-grey-alt-component {
   a {
     display: flex;
@@ -1069,6 +1075,12 @@ sup {
   p {
     line-height: 180%;
     font-size: 14px !important;
+  }
+}
+
+@media (max-width: 850px) {
+  .content-chapter-component {
+    width: 90%;
   }
 }
 

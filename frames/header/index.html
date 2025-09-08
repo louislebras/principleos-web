@@ -1,11 +1,73 @@
 <link rel="stylesheet" href="[ROOT]/css/frames/header.css">
-
+<div class="fixed-back-blur-header"></div>
 <header class="header">
     <p class="principle-wordmark">Principle™</p>
     <div class="container-menu">
         <img class="logo-principle-os-menu" src="[ROOT]/assets/media/logo-principle-os.svg" alt="">
         <div class="btn-menu">
-            <img src="../../assets/icons/icon-menu-grey.svg" alt="">
+            <img src="[ROOT]/assets/icons/icon-menu-grey.svg" alt="">
         </div>
     </div>
+
 </header>
+
+<div class="container-nav-header s-size">
+    <a href="[ROOT]/documentation/">
+        Documentation
+    </a>
+    <a href="[ROOT]/whitepaper/">
+        Whitepaper
+    </a>
+    <a class="open-modal-waitlist-form" href="[ROOT]/whitepaper/">
+        Join Waitlist
+    </a>
+    <a href="mailto:louis@principleos.com">
+        Contact
+    </a>
+</div>
+
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const btn = document.querySelector(".btn-menu");
+        const container = document.querySelector(".container-nav-header");
+        const blur = document.querySelector(".fixed-back-blur-header");
+
+        const fadeDuration = 400;
+
+        function openMenu() {
+            container.classList.add("visible");
+            blur.classList.add("visible");
+
+
+            setTimeout(() => {
+                container.classList.add("show");
+                blur.classList.add("show");
+            }, 10);
+        }
+
+        function closeMenu() {
+            container.classList.remove("show");
+            blur.classList.remove("show");
+
+
+            setTimeout(() => {
+                container.classList.remove("visible");
+                blur.classList.remove("visible");
+            }, fadeDuration);
+        }
+
+        function toggleMenu() {
+            const isVisible = container.classList.contains("show");
+            if (isVisible) {
+                closeMenu();
+            } else {
+                openMenu();
+            }
+        }
+
+        btn.addEventListener("click", toggleMenu);
+        blur.addEventListener("click", closeMenu);
+    });
+</script>

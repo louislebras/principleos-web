@@ -1,3 +1,3 @@
 export default function layout() {
-  return ["header-waiting", "pageContent", "footer-waiting"];
+  return ["loader", "header-waiting", "pageContent", "footer-waiting"];
 }

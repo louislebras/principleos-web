@@ -247,7 +247,7 @@ document.addEventListener("DOMContentLoaded", () => {
     );
   }
 
-  // --- Ouvrir ---
+  // // --- Ouvrir ---
   function openModal(modalName) {
     if (openedModals.has(modalName)) return;
 

@@ -11,3 +11,9 @@
     font-size: 14px !important;
   }
 }
+
+@media (max-width: 850px) {
+  .content-chapter-component {
+    width: 90%;
+  }
+}

@@ -1,45 +1,109 @@
+.fixed-blur-info {
+  display: flex;
+  padding: 0px 12px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  border-radius: 60px;
+  border: 1px solid #dadada72;
+  background: rgba(232, 232, 232, 0.37);
+  backdrop-filter: blur(12px);
+  height: 25px;
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  z-index: 100;
+  width: fit-content;
+  p {
+    line-height: 100% !important;
+    position: relative;
+    top: 0px;
+    display: block;
+  }
+}
+
+@media (max-width: 850px) {
+  .fixed-blur-info {
+    height: 35px;
+    width: 320px;
+  }
+}
+
 .heading-whitepaper {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 0vh;
+  width: 100%;
 
-  h2 {
+  a {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  h1 {
     width: 65%;
     max-width: 900px;
     margin-top: 20px;
   }
 
-  .container-buttons-whitepaper {
-    display: flex;
-    gap: 15px;
-    margin-top: 20px;
-
-    .open-waitlist-btn {
-      display: flex;
-      gap: 50px;
-      padding: 11px 16px;
-      border-radius: 12px;
-      background: #f9f9f9;
-      border: 1px solid #f9f9f9;
-      font-size: 11px;
-      transition: 0.3s ease;
-      text-align: center;
-      width: fit-content;
-      outline: none;
-      cursor: pointer;
-
-      &:hover {
-        border: 1px solid #ececec;
-      }
+  @media (max-width: 850px) {
+    h1 {
+      width: 95%;
     }
   }
 
   .description-subtitle-component {
     margin-top: 20px;
+    text-align: center;
   }
 
   .description-text-component {
     margin-top: 20px;
+    text-align: center;
   }
+
+  .image-wrapper-transparent-component {
+    margin-top: 15vh;
+  }
+}
+
+.container-buttons-whitepaper {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+
+  .open-waitlist-btn {
+    display: flex;
+    gap: 50px;
+    padding: 11px 16px;
+    border-radius: 12px;
+    background: #f9f9f9;
+    border: 1px solid #f9f9f9;
+    font-size: 11px;
+    transition: 0.3s ease;
+    text-align: center;
+    width: fit-content;
+    outline: none;
+    cursor: pointer;
+
+    &:hover {
+      border: 1px solid #ececec;
+    }
+  }
+}
+
+.content-whitepaper-principle {
+  display: flex;
+  align-items: center;
+
+  flex-direction: column;
+}
+
+.btns-bottom-whitepaper {
+  margin-top: 10vh;
 }
